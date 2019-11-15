@@ -1,33 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
 import Navigation from "./navigation"
 import Footer from "./footer"
 import Headertop from "./headertop"
+import { useStaticQuery, graphql } from "gatsby"
 //import "layout.css"
 
-const menuItems=[ 
-  {
-    text:"Naslovna",
-    link:"/"
-  },
-  {
-    text:"Udomi",
-    link: "/udomi",
-  },
-  {
-    text:"Trebamo vas",
-    link: "/trebamovas",
-  },
-  {
-    text:"O nama",
-    link: "/onama",
-  },
-  {
-    text:"Blog",
-    link: "/blog",
-  },
 
-]
 
 //const myStyles= {backgroundColor: "tomato", height: "100vh"}
 
@@ -35,9 +13,23 @@ const menuItems=[
 //{props.children} služi da se prikažu stvari na stranici koje su jedistvene
 
 const Layout = (props) => {
+  const data = useStaticQuery(graphql`
+  {
+    site {
+      siteMetadata {
+        menuItems {
+          link
+          text
+        }
+      }
+    }
+  }
+`)
+
+const {menuItems} = data.site.siteMetadata
 return(
  // tu moze style={myStyles} 
- <div style={{backgroundColor: "white", height: "100vh"}}> 
+ <div style={{backgroundColor: "white"}}> 
   <Headertop/>
   <Navigation menuItems={menuItems}/>
   {props.children} 

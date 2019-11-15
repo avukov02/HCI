@@ -3,10 +3,11 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 
-//import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 const onama = () => (
   <Layout>
+    <SEO title="O nama"/>
     <h1>O nama</h1>
     <Link to="/">Idi na naslovnu</Link>
     </Layout>

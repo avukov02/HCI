@@ -6,7 +6,7 @@ import React from "react"
 import Layout from "../components/layout"
 
 //import Image from "../components/image"
-//import SEO from "../components/seo"
+import SEO from "../components/seo"
 
 /*
 const menuItems=[ //niz u kojem su svi linkovi
@@ -36,9 +36,8 @@ const menuItems=[ //niz u kojem su svi linkovi
 
 const IndexPage = () => (
   <Layout>
-  
-    <h1>Teaching HCI</h1>
-    <h2>Pages</h2>
+    <SEO title="Sigurna Kućica"/>
+    <h1>Sigurna Kućica</h1>
   </Layout>
   
 )
@@ -59,3 +58,10 @@ export default IndexPage
 //</ul>
 //destrukturiranje primjenjeno gori , a mozemo i bez to je ovo povise
 //zelimo header pa od tog napravimo komponentu koju cemo izdvojiti, npr navigation komponenta i ukljucimo je na sve str
+// ako dodamo npr index.modules.css i layout.modules.css onda mozemo imati iste nazive klasa u oba file-a
+//podatke iz baze uzimamo isto preko graphql-a 
+//gatsby-source-pg za  bazu plugin
+//postgraphile izgenerira api automatski i upite radimo graphql-om a on napravi svoje upite i vraca podatke
+//unutar pages mozemo koristit page query, ali za sve sta je van pages radimo staticni query kod graphql upita
+//npm install ime plugina
+//prettier instalirat
