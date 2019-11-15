@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import React from "react"
-import { Link } from "gatsby"
-import {Header,jsx,useThemeUI} from "theme-ui"
+import {Header,jsx} from "theme-ui"
 import Logo from "./logo"
 import NavigationLinks from "./NavigationLinks"
+import Doniraj from "./doniraj"
 
 const Navigation = ({menuItems}) =>{
     //const menus= menuItems.map(({link, text}) => (
@@ -21,6 +21,7 @@ const Navigation = ({menuItems}) =>{
         <nav>
         <NavigationLinks menuItems={menuItems} />
         </nav>
+        <Doniraj/>
         </Header>
       )
    }

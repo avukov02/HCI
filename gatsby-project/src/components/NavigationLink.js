@@ -1,8 +1,7 @@
 /** @jsx jsx */
-import React from "react"
 import { Link } from "gatsby"
-import {Header,jsx,useThemeUI} from "theme-ui"
-import Logo from "./logo"
+import {jsx,useThemeUI} from "theme-ui"
+
 
 const NavigationLink=({children, ...prop})=>{
 const {theme}=useThemeUI()
