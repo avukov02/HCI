@@ -11,14 +11,14 @@ return (
     {...prop}
     sx={{
       display: "inline-block",
-      px: 2,
+      px: 3,
       ml: 4,
       color: "#78758E",
       textDecoration: "none",
       whiteSpace: "nowrap",
       letterSpacing: "wide",
       lineHeight: theme =>
-        `calc(${theme.sizes.logo} - 5 * ${theme.sizes.navLinkBorder})`,
+        `calc(${theme.sizes.logo} - 4 * ${theme.sizes.navLinkBorder})`,
       borderTop: theme => `${theme.sizes.navLinkBorder} solid transparent`,
       borderBottom: theme => `${theme.sizes.navLinkBorder} solid transparent`,
       transition: "all 0.25s linear",

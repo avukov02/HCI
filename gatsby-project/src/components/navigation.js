@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import {Header,jsx} from "theme-ui"
 import Logo from "./logo"
 import NavigationLinks from "./NavigationLinks"

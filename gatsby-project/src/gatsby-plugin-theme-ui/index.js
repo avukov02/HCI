@@ -11,7 +11,12 @@ const theme = {
     container: "1024px",
     logo: "60px",
     navLinkBorder: "3px",
+    footerimg:"50px"
   },
+  colors:{
+     primaryHover:"#78758E",
+  },
+  
 }
 
 export default theme

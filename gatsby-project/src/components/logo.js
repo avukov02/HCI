@@ -12,6 +12,7 @@ const Logo = () => (
 
           height: "logo",
           width: "auto",
+          marginTop:"-20px"
         }}
       />
     </Link>

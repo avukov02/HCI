@@ -7,6 +7,8 @@ import Layout from "../components/layout"
 
 //import Image from "../components/image"
 import SEO from "../components/seo"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 
 /*
 const menuItems=[ //niz u kojem su svi linkovi
@@ -34,15 +36,38 @@ const menuItems=[ //niz u kojem su svi linkovi
 ]
 */
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <Layout>
     <SEO title="Sigurna Kućica"/>
-    <h1>Sigurna Kućica</h1>
+    {data.allFile.edges.map(({node})=>(
+    <Img key={node.id} fluid={node.childImageSharp.fluid}/>
+    ))}
+     <h1>Sigurna Kućica</h1>
   </Layout>
   
 )
 
 export default IndexPage
+
+export const query = graphql`
+  {
+    allFile(filter: {absolutePath: {regex: "//content/images//"}}) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
+
 
 //<Img> kompontenta za unos slika, blura ih...
 //map fja podrzava js array, za svaki element niza primjeni funkciju koju zadamo i vrati novi array s primjenjenom fjom
