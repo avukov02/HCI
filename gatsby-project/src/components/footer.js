@@ -11,6 +11,8 @@ const Footer=()=> {
             backgroundColor:"#D0EDE6",
             padding:"30px",
             margin:"0 -8.3px 0 -8px",
+            /*gridRowStart: 7,
+            gridRowEnd: 8*/
             position:"relative",
             bottom:"0",
             left:"0",

@@ -29,7 +29,8 @@ const Layout = (props) => {
 const {menuItems} = data.site.siteMetadata
 return(
  // tu moze style={myStyles} 
- <div style={{backgroundColor: "white"}}> 
+ <div style={{ /*display: "grid",
+  gridtemplaterows: "1fr auto"*/backgroundColor: "white"}}> 
   <Headertop/>
   <Navigation menuItems={menuItems}/>
   {props.children} 

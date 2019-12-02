@@ -56,13 +56,8 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
 
-    {
-      resolve: 'gatsby-source-googlemaps-geocoding',
-      options: {
-        key: 'AIzaSyB0iFkm4Bjy2LUAvxwIK5eYjy2eX6VO3y8',
-        address: 'Jagodno 113a, 10415, Jagodno'
-      },
-    }
+    
+    
     
   ],
 }
