@@ -3,30 +3,28 @@ module.exports = {
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
-     menuItems: [ 
+    menuItems: [
       {
-        text:"Naslovna",
-        link:"/"
+        text: "Naslovna",
+        link: "/",
       },
       {
-        text:"Udomi",
+        text: "Udomi",
         link: "/udomi",
       },
       {
-        text:"Trebamo vas",
+        text: "Trebamo vas",
         link: "/trebamovas",
       },
       {
-        text:"O nama",
+        text: "O nama",
         link: "/onama",
       },
       {
-        text:"Blog",
+        text: "Blog",
         link: "/blog",
       },
-    
     ],
-   
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -55,9 +53,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-
-    
-    
-    
+    `gatsby-plugin-styled-components`,
   ],
 }

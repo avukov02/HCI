@@ -1,29 +1,28 @@
 /** @jsx jsx */
-import {Header,jsx} from "theme-ui"
+import { Header, jsx } from "theme-ui"
 import Logo from "./logo"
 import NavigationLinks from "./NavigationLinks"
 import Doniraj from "./doniraj"
 
-const Navigation = ({menuItems}) =>{
-    //const menus= menuItems.map(({link, text}) => (
-     // <NavigationLink  to={link}>{text}</NavigationLink>   
-     //  ))
+const Navigation = ({ menuItems }) => {
+  //const menus= menuItems.map(({link, text}) => (
+  // <NavigationLink  to={link}>{text}</NavigationLink>
+  //  ))
 
-     //  return <Header sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
-     //      <Logo/>
-     //      {menus}
-      // </Header>
-      return(
-        
-        <Header sx={{justifyContent:"center",alignContent:"center"}}>
-            <Logo />
-        <nav>
+  //  return <Header sx={{display:"flex",justifyContent:"center",alignItems:"center"}}>
+  //      <Logo/>
+  //      {menus}
+  // </Header>
+  return (
+    <Header sx={{ justifyContent: "center", alignContent: "center" }}>
+      <Logo />
+      <nav>
         <NavigationLinks menuItems={menuItems} />
-        </nav>
-        <Doniraj/>
-        </Header>
-      )
-   }
+      </nav>
+      <Doniraj />
+    </Header>
+  )
+}
 
 export default Navigation
 
