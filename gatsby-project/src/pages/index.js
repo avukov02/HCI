@@ -140,3 +140,31 @@ export const query = graphql`
 //unutar pages mozemo koristit page query, ali za sve sta je van pages radimo staticni query kod graphql upita
 //npm install ime plugina
 //prettier instalirat
+/* <BackgroundSlider 
+query={useStaticQuery(graphql`
+query {
+   content:allFile (filter: {sourceInstanceName: {eq: "content"}}){
+    nodes {
+      relativePath
+      childImageSharp {
+        fluid (maxWidth: 4000, quality: 100){
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+}
+`)}
+initDelay={2} // delay before the first transition (if left at 0, the first image will be skipped initially)
+transition={4} // transition duration between images
+duration={8} // how long an image is shown
+// specify images to include (and their order) according to `relativePath`
+images={["background/pas2.jpeg", "background/pas3.jpeg", "background/pas22.jpg", "background/pas111.png", "background/pas2.jpeg"]} 
+
+// pass down standard element props
+style={{
+transform: "rotate(-2deg) scale(.9)",
+}}           
+> 
+
+</BackgroundSlider>*/

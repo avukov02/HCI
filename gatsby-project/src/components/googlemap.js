@@ -14,7 +14,7 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>
 const GoogleMap = () => (
   <div style={{ display: "flex", height: "220px", width: "320px" }}>
     <GoogleMapReact
-      bootstrapURLKeys={{ key: "AIzaSyB0iFkm4Bjy2LUAvxwIK5eYjy2eX6VO3y8" }}
+      bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
       defaultCenter={defaultProps.center}
       defaultZoom={defaultProps.zoom}
     >
@@ -28,3 +28,5 @@ const GoogleMap = () => (
 )
 
 export default GoogleMap
+
+//dotenv package
