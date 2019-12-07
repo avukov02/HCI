@@ -9,10 +9,9 @@ import { useThemeUI, jsx } from "theme-ui"
 //import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
+import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
-
+import "react-image-gallery/styles/css/image-gallery.css"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
   {
@@ -40,51 +39,24 @@ const menuItems=[ //niz u kojem su svi linkovi
 */
 
 const IndexPage = ({ data }) => {
-  const { slika } = data
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />
-      <BackgroundImage
-        fluid={slika.sharp.fluid}
-        style={{
-          height: "430px",
-          margin: "-14px -8px 0px -8px",
-          position: "relative",
-        }}
-      >
-        <div
-          style={{
-            height: "100%",
-            width: "100%",
-            display: "flex",
-          }}
-        >
-          <p
-            sx={{
-              color: "white",
-              fontSize: "40px",
-              position: "absolute",
-              left: "120px",
-              top: "160px",
-            }}
-          >
-            PRUŽI MI DOM
-          </p>
-          <p
-            sx={{
-              color: "white",
-              fontSize: "30px",
-              padding: "4px",
-              position: "absolute",
-              left: "120px",
-              top: "230px",
-              border: "2px solid white",
-            }}
-          >
-            Udomi
-          </p>
-        </div>
-      </BackgroundImage>
+      <ImageGallery
+        items={[
+          data.allFile.edges[0].node.childImageSharp.fluid,
+          data.allFile.edges[1].node.childImageSharp.fluid,
+          data.allFile.edges[2].node.childImageSharp.fluid,
+
+        ]}
+        
+        autoPlay="true"
+        showPlayButton="false"
+        showBullets="false"
+        showFullscreenButton="false"
+        showThumbnails="false"
+        showNav="true"
+      />
 
       <Sigurna />
 
@@ -108,11 +80,16 @@ export default IndexPage
 
 export const query = graphql`
   {
-    slika: file(relativePath: { eq: "background/pas22.jpg" }) {
-      sharp: childImageSharp {
-        fluid(maxWidth: 1920, traceSVG: { color: "#c3dafe" }) {
-          src
-          ...GatsbyImageSharpFluid
+    allFile(filter: { absolutePath: { regex: "//content/background/" } }) {
+      edges {
+        node {
+          id
+          base
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
         }
       }
     }

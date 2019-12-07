@@ -55,7 +55,7 @@ export default Blog
 
 export const query = graphql`
   {
-    slika: file(relativePath: { eq: "background/pas3.jpeg" }) {
+    slika: file(relativePath: { eq: "images/pas3.jpeg" }) {
       sharp: childImageSharp {
         fluid(maxWidth: 1920, traceSVG: { color: "#c3dafe" }) {
           src
