@@ -3,23 +3,23 @@ import React from "react"
 import { useThemeUI, jsx } from "theme-ui"
 import FooterIcon from "./footericon"
 import GoogleMap from "./googlemap"
+import useMediaQuery from 'react-use-media-query-hook';
 
 const Footer = () => {
   const { theme } = useThemeUI()
+  const isRowBased = useMediaQuery('(min-width: 700px)');
   return (
     <footer
-      sx={{
+      style={{
         backgroundColor: "#E2F0ED",
         padding: "30px",
-        margin: "0 -8.3px 0 -8px",
+        margin: "0 -8px 0 -8px",
       }}
     >
       <div
-        sx={{
-          display: "flex",
-          justifyContent: "space-around",
-          alignItems: "center",
-        }}
+      style={isRowBased ? styles1 : styles2}
+       
+        
       >
         <FooterIcon />
         <GoogleMap />
@@ -39,3 +39,15 @@ const Footer = () => {
 }
 
 export default Footer
+
+const styles1={
+  display:  "flex",
+  justifyContent: "space-around" ,
+  alignItems: "center"
+}
+
+const styles2={
+  display:  "grid",
+  justifyItems: "center",
+  gridRowGap:"20px"
+}

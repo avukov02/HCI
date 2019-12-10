@@ -1,8 +1,11 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx, useThemeUI } from "theme-ui"
+import useMediaQuery from 'react-use-media-query-hook';
 
 const Sigurna = () => {
+  const isLarge = useMediaQuery('(min-width: 900px)');
+  const isnotLargeatAll = useMediaQuery('(max-width: 900px,min-width:600px)');
   return (
     <div
       style={{
@@ -12,14 +15,14 @@ const Sigurna = () => {
         justifyContent: "space-around",
         alignItems: "center",
         margin: "0px -8px 20px -8px",
-        padding: "30px 0 30px 0",
+        padding: isLarge? "30px 0 30px 0" : "0",
       }}
     >
-      <p style={{ color: "#78758E", fontSize: "25px" }}>
+      <p style={{ color: "#78758E", fontSize: "25px" ,textAlign:"center"}}>
         {" "}
         Udruga za udomljavanje napuštenih pasa
       </p>
-      <h2 style={{ color: "#9AD1C4", fontSize: "35px", marginTop: "0px" }}>
+      <h2 style={{ color: "#9AD1C4", fontSize: "35px", marginTop: "0px",textAlign:"center" }}>
         Sigurna Kućica
       </h2>
       <p
@@ -27,7 +30,7 @@ const Sigurna = () => {
           fontSize: "20px",
           textAlign: "center",
           color: "#A8A7AF",
-          margin: "0 400px 0 400px",
+          margin: isLarge ? "0 200px 0 200px": isnotLargeatAll ? "0 50px 0 50px" : "0 20px 0 20px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}

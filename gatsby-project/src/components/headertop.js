@@ -1,21 +1,18 @@
 /** @jsx jsx */
 import React from "react"
 import { jsx, useThemeUI } from "theme-ui"
+import useMediaQuery from 'react-use-media-query-hook';
 
 const Headertop = () => {
+  const isLarge = useMediaQuery('(min-width: 700px)');
+  const Hide=useMediaQuery('(min-width: 340px)');
   return (
     <div
-      style={{
-        marginTop: "-10px",
-        display: "flex",
-        flexDirection: "row",
-        justifyContent: "space-between",
-        borderBottom: "1px solid #78758E",
-      }}
+      style={isLarge ? style1 : style2}
     >
       <div
         style={{
-          display: "flex",
+          display: Hide ? "flex": "grid",
           flexDirection: "row",
         }}
       >
@@ -81,3 +78,18 @@ const Headertop = () => {
 }
 
 export default Headertop
+
+const style1={
+  marginTop: "-10px",
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  borderBottom: "1px solid #78758E",
+}
+
+const style2={
+  marginTop: "-10px",
+  display: "grid",
+  justifyItems: "center",
+  borderBottom: "1px solid #78758E",
+}

@@ -3,6 +3,7 @@ import React from "react"
 import { jsx, useThemeUI } from "theme-ui"
 import Img from "gatsby-image"
 import { graphql,StaticQuery } from "gatsby"
+import useMediaQuery from 'react-use-media-query-hook';
 
 function renderImage({ file }) {
     
@@ -10,6 +11,8 @@ function renderImage({ file }) {
   }
 
 const About = () => {
+  const isLarge = useMediaQuery('(min-width: 900px)');
+  const isnotLargeatAll = useMediaQuery('(max-width: 900px,min-width:600px)');
   return (
     <div
       style={{
@@ -28,7 +31,7 @@ const About = () => {
           fontSize: "20px",
           textAlign: "center",
           color: "#A8A7AF",
-          margin: "0 400px 0 400px",
+          margin: isLarge ? "0 200px 0 200px": isnotLargeatAll ? "0 50px 0 50px" : "0 20px 0 20px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}
@@ -61,7 +64,7 @@ const About = () => {
 <p style={{
           fontSize: "20px",
           color: "#A8A7AF",
-          margin: "0 400px 0 400px",
+          margin: isLarge ? "0 200px 0 200px": isnotLargeatAll ? "0 50px 0 50px" : "0 20px 0 20px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}>

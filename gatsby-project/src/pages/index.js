@@ -12,9 +12,10 @@ import { graphql } from "gatsby"
 import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
 import "react-image-gallery/styles/css/image-gallery.css"
+import "./index.css"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
-  {
+
     text:"Naslovna",
     link:"/"
   },
@@ -38,9 +39,11 @@ const menuItems=[ //niz u kojem su svi linkovi
 ]
 */
 
+
+
 const IndexPage = ({ data }) => {
   return (
-    <Layout>
+    <Layout >
       <SEO title="Sigurna Kućica" />
       <ImageGallery
         items={[
@@ -50,12 +53,12 @@ const IndexPage = ({ data }) => {
 
         ]}
         
+        
         autoPlay="true"
         showPlayButton="false"
         showBullets="false"
         showFullscreenButton="false"
         showThumbnails="false"
-        showNav="true"
       />
 
       <Sigurna />
@@ -77,6 +80,7 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
+
 
 export const query = graphql`
   {
