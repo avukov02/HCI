@@ -1,9 +1,8 @@
 /** @jsx jsx */
 import { Link } from "gatsby"
 import { jsx, useThemeUI } from "theme-ui"
-import Triangle from "./triangle"
 
-const SideMenu = ({ menuItems }) => {
+const SideMenu2 = ({ menuItems }) => {
   const { theme } = useThemeUI()
 
   return (
@@ -11,14 +10,14 @@ const SideMenu = ({ menuItems }) => {
       sx={{
         zIndex: "999",
         position: "absolute",
-        top: "59px",
-        right: "25px",
+        top: "56.9px",
+        right: "-50px",
         display: "flex",
         flexDirection: "column",
         p: 2,
         backgroundColor: "white",
         border: theme => theme.borders.header,
-        boxShadow: theme => theme.shadows.header,
+        borderTop: "none",
       }}
     >
       {menuItems.map(({ link, text }) => (
@@ -49,8 +48,7 @@ const SideMenu = ({ menuItems }) => {
           {text}
         </Link>
       ))}
-      <Triangle />
     </div>
   )
 }
-export default SideMenu
+export default SideMenu2

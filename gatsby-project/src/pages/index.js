@@ -1,18 +1,16 @@
 /** @jsx jsx */
-import React from "react"
 //import { Link } from "gatsby"
 
 // ne triba jer cemo dodat u layout: import Navigation from "../components/navigation"
 //importamo layout
 import Layout from "../components/layout"
-import { useThemeUI, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
 //import Image from "../components/image"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
 import "react-image-gallery/styles/css/image-gallery.css"
-import "./index.css"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
 
@@ -39,21 +37,16 @@ const menuItems=[ //niz u kojem su svi linkovi
 ]
 */
 
-
-
 const IndexPage = ({ data }) => {
   return (
-    <Layout >
+    <Layout>
       <SEO title="Sigurna Kućica" />
       <ImageGallery
         items={[
           data.allFile.edges[0].node.childImageSharp.fluid,
           data.allFile.edges[1].node.childImageSharp.fluid,
           data.allFile.edges[2].node.childImageSharp.fluid,
-
         ]}
-        
-        
         autoPlay="true"
         showPlayButton="false"
         showBullets="false"
@@ -80,7 +73,6 @@ const IndexPage = ({ data }) => {
 }
 
 export default IndexPage
-
 
 export const query = graphql`
   {

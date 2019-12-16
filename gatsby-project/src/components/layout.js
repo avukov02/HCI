@@ -29,7 +29,6 @@ const Layout = props => {
       <Headertop />
       <Navigation menuItems={menuItems} />
       {props.children}
-
       <Footer />
     </div>
   )

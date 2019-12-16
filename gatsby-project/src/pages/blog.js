@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 //import Navigation from "../components/navigation"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,7 +16,6 @@ const Blog = ({ data }) => {
       {imageFiles.images.map(({ image }) => (
         <Img key={image.id} fluid={image.sharp.fluid} />
       ))}
-      <Link to="/">Index</Link>
     </Layout>
   )
 }

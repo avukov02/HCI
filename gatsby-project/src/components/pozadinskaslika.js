@@ -1,12 +1,7 @@
 import React from "react"
 import BackgroundImage from "gatsby-background-image"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import useMediaQuery from "react-use-media-query-hook"
-
-function renderImage({ file }) {
-  return <Img fluid={file.childImageSharp.fluid} />
-}
 
 const PozadinskaSlika = ({ naziv }) => {
   const isLarge = useMediaQuery('(min-width: 700px)');

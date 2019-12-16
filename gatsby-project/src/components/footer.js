@@ -1,12 +1,10 @@
 /** @jsx jsx */
-import React from "react"
-import { useThemeUI, jsx } from "theme-ui"
+import { jsx } from "theme-ui"
 import FooterIcon from "./footericon"
 import GoogleMap from "./googlemap"
 import useMediaQuery from 'react-use-media-query-hook';
 
 const Footer = () => {
-  const { theme } = useThemeUI()
   const isRowBased = useMediaQuery('(min-width: 700px)');
   return (
     <footer

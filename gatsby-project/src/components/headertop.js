@@ -1,6 +1,5 @@
 /** @jsx jsx */
-import React from "react"
-import { jsx, useThemeUI } from "theme-ui"
+import { jsx} from "theme-ui"
 import useMediaQuery from 'react-use-media-query-hook';
 
 const Headertop = () => {

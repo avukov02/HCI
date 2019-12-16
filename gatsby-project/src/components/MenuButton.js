@@ -1,33 +1,95 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
+import more from "../assets/more5.png"
+import SideMenu from "./sidemenu"
 import React from "react"
 
-const MenuButton = ({ status, onClick, className }) => {
-  const isDisplayed = useMediaQuery("(min-width: 790px)")
-  return (
-    <button
-      className={cn(styles.Button, styles[status], className)}
-      onClick={onClick}
-      style={{
-        height: "40px",
-        position: "fixed",
-        right: "0px",
-        top: "calc(var(--height) / 2)",
-        transform: "translateY(-50%)",
+class MoreButton extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      opened: false,
+    }
+    this.ClickMoreButton = this.ClickMoreButton.bind(this)
+    this.handleOutsideClick = this.handleOutsideClick.bind(this)
+  }
 
-        cursor: "pointer",
-        background: "#fff",
-        border: "1px solid var(--color-grey, #000)",
-        display: isDisplayed ? "none" : "block",
+  ClickMoreButton() {
+    if (!this.state.opened) {
+      // attach/remove event handler
+      document.addEventListener("click", this.handleOutsideClick, false)
+    } else {
+      document.removeEventListener("click", this.handleOutsideClick, false)
+    }
 
-        padding: " 0 10px",
-        overflowY: "hidden",
-        transition: "all 0.25s linear",
+    this.setState(prevState => ({
+      opened: !prevState.opened,
+    }))
+  }
 
-        zIndex: "var(--z-index-menu, 1000)",
-      }}
-    >
-      <span className={cn(styles.Content, styles[status])}>MENU</span>
-    </button>
-  )
+  handleOutsideClick(e) {
+    // ignore clicks on the component itself
+    if (this.node.contains(e.target)) {
+      return
+    }
+
+    this.ClickMoreButton()
+  }
+
+  render() {
+    const { opened } = this.state
+
+    const disp1 = "no"
+    const { disp, menuItems } = this.props
+    return disp1 === disp ? (
+      <div
+        ref={node => {
+          this.node = node
+        }}
+        sx={{
+          display: "inline-block",
+          position: "relative",
+          px: 3,
+          ml: 4,
+          width: "50px",
+          cursor: "pointer",
+          "&:hover": {
+            backgroundColor: "indigo.2",
+          },
+        }}
+        onClick={this.ClickMoreButton}
+      >
+        <img
+          alt="vise"
+          src={more}
+          sx={{
+            position: "absolute",
+            top: "-15px",
+            stroke: "red",
+            height: "more",
+            width: "auto",
+          }}
+        />
+        {opened && <SideMenu menuItems={menuItems} />}
+      </div>
+    ) : (
+      <div
+        sx={{
+          display: "none",
+        }}
+      >
+        <img
+          alt="vise1"
+          src={more}
+          sx={{
+            stroke: "red",
+            height: "more",
+            width: "auto",
+          }}
+        />
+      </div>
+    )
+  }
 }
 
-export default MenuButton
+export default MoreButton

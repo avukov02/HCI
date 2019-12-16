@@ -1,5 +1,4 @@
 /** @jsx jsx */
-import React from "react"
 import { jsx } from "theme-ui"
 import fcb from "../assets/fcb.png"
 import ig from "../assets/igg.png"
@@ -25,6 +24,7 @@ const FooterIcon = () => {
       {slike.map(({ link, src }) => (
         <a href={link}>
           <img
+            alt="slikezafooter"
             src={src}
             sx={{
               height: "footerimg",

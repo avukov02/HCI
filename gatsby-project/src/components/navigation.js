@@ -16,7 +16,7 @@ const Navigation = ({ menuItems }) => {
   return (
     <Header sx={{ justifyContent: "center", alignContent: "center" }}>
       <Logo />
-      <nav>
+      <nav sx={{display:"inline-block"}}>
         <NavigationLinks menuItems={menuItems} />
       </nav>
       <Doniraj />
