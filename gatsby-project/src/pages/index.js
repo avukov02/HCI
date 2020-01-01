@@ -14,7 +14,6 @@ import "react-image-gallery/styles/css/image-gallery.css"
 import BlogExcerpt from "../components/blog-excerpt"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
-
     text:"Naslovna",
     link:"/"
   },
@@ -34,7 +33,6 @@ const menuItems=[ //niz u kojem su svi linkovi
     text:"Blog",
     link: "/blog",
   },
-
 ]
 */
 
@@ -85,6 +83,7 @@ const IndexPage = ({ data}) => {
 
 export default IndexPage
 
+
 export const query = graphql`
 query
   {
@@ -102,21 +101,23 @@ query
       }
     }
   
-    second:allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
-      posts: edges {
-        post: node {
-          id
-          excerpt
-          frontmatter {
-            title
-            date(formatString: "MMMM DD, YYYY")
-            slug
+    second:allMdx(
+      sort: {fields: [frontmatter___date], order: DESC}, limit: 3, 
+      filter: {fileAbsolutePath: {regex: "//content/blog//"}}) {
+        posts: edges {
+          post: node {
+            id
+            excerpt
+            frontmatter {
+              title
+              date(formatString: "MMMM DD, YYYY")
+              slug
+            }
           }
         }
       }
     }
-  }
-
+    
 `
 
 //<Img> kompontenta za unos slika, blura ih...

@@ -13,7 +13,7 @@ const Sigurna = () => {
         flexDirection: "column",
         justifyContent: "space-around",
         alignItems: "center",
-        margin: "0px -8px 10px -8px",
+        margin: "0px -8px 20px -8px",
         padding: isLarge ? "30px 0 30px 0" : "0",
       }}
     >
@@ -37,10 +37,10 @@ const Sigurna = () => {
           textAlign: "center",
           color: "#A8A7AF",
           margin: isLarge
-            ? "0 200px 0 200px"
+            ? "0 200px 0px 200px"
             : isnotLargeatAll
-            ? "0 50px 0 50px"
-            : "0 20px 0 20px",
+            ? "0 50px 70px 50px"
+            : "0 20px 70px 20px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}
