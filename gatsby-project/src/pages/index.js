@@ -11,6 +11,7 @@ import { graphql } from "gatsby"
 import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
 import "react-image-gallery/styles/css/image-gallery.css"
+import BlogExcerpt from "../components/blog-excerpt"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
 
@@ -37,15 +38,16 @@ const menuItems=[ //niz u kojem su svi linkovi
 ]
 */
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data}) => {
+  const posts=data.second.posts
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />
       <ImageGallery
         items={[
-          data.allFile.edges[0].node.childImageSharp.fluid,
-          data.allFile.edges[1].node.childImageSharp.fluid,
-          data.allFile.edges[2].node.childImageSharp.fluid,
+          data.first.edges[0].node.childImageSharp.fluid,
+          data.first.edges[1].node.childImageSharp.fluid,
+          data.first.edges[2].node.childImageSharp.fluid,
         ]}
         autoPlay="true"
         showPlayButton="false"
@@ -59,14 +61,22 @@ const IndexPage = ({ data }) => {
       <div
         style={{
           display: "flex",
+          flexDirection:"column",
           height: "400px",
-          alignItems: "flex-start",
           justifyContent: "center",
         }}
       >
-        <p style={{ color: "#78758E", fontSize: "30px", marginTop: "10px" }}>
+        <p style={{ textAlign:"center",color: "#78758E", fontSize: "30px", marginTop: "10px" }}>
           Najnovije s bloga
         </p>
+        <div style={{display: "grid",
+      gridTemplateColumns:"auto auto auto",
+      gridColumnGap: "100px",
+      justifyItems:"center",
+      paddingLeft: "100px",
+      paddingRight: "100px"}} >
+      <BlogExcerpt posts={posts} />
+      </div>
 
       </div>
     </Layout>
@@ -78,7 +88,7 @@ export default IndexPage
 export const query = graphql`
 query
   {
-   allFile(filter: { absolutePath: { regex: "//content/background/" } }) {
+   first:allFile(filter: { absolutePath: { regex: "//content/background/" } }) {
       edges {
         node {
           id
@@ -87,6 +97,20 @@ query
             fluid {
               ...GatsbyImageSharpFluid_tracedSVG
             }
+          }
+        }
+      }
+    }
+  
+    second:allMdx(sort: {fields: [frontmatter___date], order: DESC}, limit: 3) {
+      posts: edges {
+        post: node {
+          id
+          excerpt
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            slug
           }
         }
       }
