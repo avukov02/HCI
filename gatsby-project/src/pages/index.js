@@ -67,6 +67,7 @@ const IndexPage = ({ data }) => {
         <p style={{ color: "#78758E", fontSize: "30px", marginTop: "10px" }}>
           Najnovije s bloga
         </p>
+
       </div>
     </Layout>
   )
@@ -75,8 +76,9 @@ const IndexPage = ({ data }) => {
 export default IndexPage
 
 export const query = graphql`
+query
   {
-    allFile(filter: { absolutePath: { regex: "//content/background/" } }) {
+   allFile(filter: { absolutePath: { regex: "//content/background/" } }) {
       edges {
         node {
           id
@@ -90,6 +92,7 @@ export const query = graphql`
       }
     }
   }
+
 `
 
 //<Img> kompontenta za unos slika, blura ih...
