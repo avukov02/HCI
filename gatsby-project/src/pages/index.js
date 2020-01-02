@@ -12,6 +12,7 @@ import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
 import "react-image-gallery/styles/css/image-gallery.css"
 import BlogExcerpt from "../components/blog-excerpt"
+import useMediaQuery from "react-use-media-query-hook"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
     text:"Naslovna",
@@ -38,6 +39,8 @@ const menuItems=[ //niz u kojem su svi linkovi
 
 const IndexPage = ({ data}) => {
   const posts=data.second.posts
+  const isLarge = useMediaQuery("(min-width: 900px)")
+  const isnotLargeatAll = useMediaQuery("(min-width:650px)")
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />
@@ -60,7 +63,7 @@ const IndexPage = ({ data}) => {
         style={{
           display: "flex",
           flexDirection:"column",
-          height: "400px",
+          
           justifyContent: "center",
         }}
       >
@@ -68,11 +71,11 @@ const IndexPage = ({ data}) => {
           Najnovije s bloga
         </p>
         <div style={{display: "grid",
-      gridTemplateColumns:"auto auto auto",
+      gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
       gridColumnGap: "100px",
       justifyItems:"center",
-      paddingLeft: "100px",
-      paddingRight: "100px"}} >
+      paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",
+      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",}} >
       <BlogExcerpt posts={posts} />
       </div>
 

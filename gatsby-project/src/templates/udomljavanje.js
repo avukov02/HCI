@@ -1,18 +1,19 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
 import { graphql } from "gatsby"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
 import Layout from "../components/layout"
 import PozadinskaSlika from "../components/pozadinskaslika"
 import SEO from "../components/seo"
 import UdomiExcerpt from "../components/udomi-excerpt"
+import useMediaQuery from "react-use-media-query-hook"
 
 const Udomljavanje = ({ pageContext,data: {
   allMdx: { psi },
 },}) => {
 
-  
+  const isLarge = useMediaQuery("(min-width: 900px)")
+  const isnotLargeatAll = useMediaQuery("(min-width:650px)")
   const { currentPage, numofPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numofPages
@@ -27,12 +28,13 @@ const Udomljavanje = ({ pageContext,data: {
       <PozadinskaSlika naziv={"Udomi"}/>
     <div sx={{
         display: "grid",
-        gridTemplateColumns:"auto auto auto",
+        gridTemplateColumns: isLarge ? "auto auto auto" : isnotLargeatAll ? "auto auto" : "auto",
         gridColumnGap: "10px",
+        gridRowGap:"10px",
         justifyItems:"center",
-        paddingLeft: "100px",
-        paddingRight: "100px",
-        marginBottom:"10px"
+        paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",
+      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",
+        marginBottom:"10px",
       }}>
      <UdomiExcerpt psi={psi} />
     </div>

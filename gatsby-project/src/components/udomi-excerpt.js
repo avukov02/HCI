@@ -14,6 +14,7 @@ export default ({ psi }) => {
           display: "grid",
           gridTemplateRows:"auto auto auto",
           gridColumnGap: "10px",
+          gridRowGap: "10px",
           justifyItems:"center",
           padding:"10px",
           textAlign:"center",
