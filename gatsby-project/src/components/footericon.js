@@ -22,7 +22,7 @@ const FooterIcon = () => {
   return (
     <div>
       {slike.map(({ link, src }) => (
-        <a href={link}>
+        <a key={link} href={link}>
           <img
             alt="slikezafooter"
             src={src}

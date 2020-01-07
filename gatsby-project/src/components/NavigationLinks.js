@@ -13,35 +13,35 @@ const NavigationLinks = ({ menuItems }) => {
   return isLarge ? (
     <>
       {menuItems.map(({ link, text }) => (
-        <NavigationLink to={link}>{text}</NavigationLink>
+        <NavigationLink  key={link} to={link}>{text}</NavigationLink>
       ))}
       <MenuButton disp={"yes"} />
     </>
   ) : isLarge1 ? (
     <>
       {menuItems.slice(0, 3).map(({ link, text }) => (
-        <NavigationLink to={link}>{text}</NavigationLink>
+        <NavigationLink key={link} to={link}>{text}</NavigationLink>
       ))}
       <MenuButton disp={"no"} menuItems={menuItems.slice(3, 5)} />
     </>
   ) : isLarge2 ? (
     <>
       {menuItems.slice(0, 2).map(({ link, text }) => (
-        <NavigationLink to={link}>{text}</NavigationLink>
+        <NavigationLink key={link} to={link}>{text}</NavigationLink>
       ))}
       <MenuButton disp={"no"} menuItems={menuItems.slice(2, 5)} />
     </>
   ) : isLarge3 ? (
     <>
       {menuItems.slice(0, 1).map(({ link, text }) => (
-        <NavigationLink to={link}>{text}</NavigationLink>
+        <NavigationLink key={link} to={link}>{text}</NavigationLink>
       ))}
       <MenuButton disp={"no"} menuItems={menuItems.slice(1, 5)} />
     </>
   ) : (
     <>
       {menuItems.slice(0, 0).map(({ link, text }) => (
-        <NavigationLink to={link}>{text}</NavigationLink>
+        <NavigationLink key={link} to={link}>{text}</NavigationLink>
       ))}
       <MenuButton2 menuItems={menuItems} />
     </>

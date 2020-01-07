@@ -23,10 +23,9 @@ const About = () => {
         padding: "30px 0 30px 0",
       }}
     >
-      <p
+      <div
         style={{
           fontSize: "20px",
-          textAlign: "center",
           color: "#A8A7AF",
           margin: isLarge
             ? "0 200px 0 200px"
@@ -37,15 +36,18 @@ const About = () => {
           lineHeight: "1.8",
         }}
       >
-        Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
+       <p style={{textAlign: "left"}}> Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
         Velike Gorice i pomažemo udomljavati pse iz skloništa. S obzirom da
         preuzimamo i pse na skrb do udomljenja i najmanja donacija omogućuje nam
         rad i svakodnevnu brigu o njima. Budite uz nas.
-        <br />
+        </p>
+        <p style={{textAlign: "center"}}>
         Račun za donacije: HR6723600001102587785, ZABAHR2X
-        <br />
+        </p>
+        <p style={{textAlign: "center"}}>
         paypal: sigurnakucica@gmail.com
-      </p>
+        </p>
+      </div>
       <div
         style={{
           marginTop: "20px",
@@ -70,7 +72,7 @@ const About = () => {
           render={renderImage}
         />
       </div>
-      <p
+      <div
         style={{
           fontSize: "20px",
           color: "#A8A7AF",
@@ -83,7 +85,7 @@ const About = () => {
           lineHeight: "1.8",
         }}
       >
-        <ul style={{ textAlign: "center", listStylePosition: "inside" }}>
+        <ul style={{ textAlign: "left", listStylePosition: "inside" }}>
           <p>Ciljevi i aktivnosti udruge Sigurna kućica:</p>
           <li>briga za napuštene i neželjene životinje</li>
           <li>poticanje udomljavanja i odgovornog vlasništva</li>
@@ -101,7 +103,7 @@ const About = () => {
             životinjama u skloništu.
           </li>
         </ul>
-      </p>
+      </div>
     </div>
   )
 }

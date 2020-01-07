@@ -50,11 +50,11 @@ const IndexPage = ({ data}) => {
           data.first.edges[1].node.childImageSharp.fluid,
           data.first.edges[2].node.childImageSharp.fluid,
         ]}
-        autoPlay="true"
-        showPlayButton="false"
-        showBullets="false"
-        showFullscreenButton="false"
-        showThumbnails="false"
+        autoPlay={false}
+        showPlayButton={false}
+        showBullets={false}
+        showFullscreenButton={false}
+        showThumbnails={false}
       />
 
       <Sigurna />

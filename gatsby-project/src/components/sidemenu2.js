@@ -22,6 +22,7 @@ const SideMenu2 = ({ menuItems }) => {
     >
       {menuItems.map(({ link, text }) => (
         <Link
+        key={link}
           to={link}
           sx={{
             m: 2,

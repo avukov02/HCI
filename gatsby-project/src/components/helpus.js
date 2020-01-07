@@ -29,7 +29,7 @@ const Help = () => {
             color: "#9AD1C4",
             fontSize: "35px",
             marginTop: "0px",
-            textAlign: "center",
+            textAlign: "left",
           }}
         >
           Privremeno skrbništvo
@@ -37,7 +37,7 @@ const Help = () => {
         <p
           style={{
             fontSize: "20px",
-            textAlign: "center",
+            textAlign: "left",
             color: "#A8A7AF",
             margin: isLarge
               ? "0 200px 0px 200px"
@@ -108,7 +108,7 @@ const Help = () => {
             color: "#9AD1C4",
             fontSize: "35px",
             marginTop: "0px",
-            textAlign: "center",
+            textAlign: "left",
           }}
         >
           Volontiraj
@@ -123,7 +123,7 @@ const Help = () => {
         <p
           style={{
             fontSize: "20px",
-            textAlign: "center",
+            textAlign: "left",
             color: "#A8A7AF",
             margin: isLarge
               ? "0 200px 0px 200px"
@@ -165,15 +165,14 @@ const Help = () => {
             color: "#9AD1C4",
             fontSize: "35px",
             marginTop: "0px",
-            textAlign: "center",
+            textAlign: "left",
           }}
         >
           Doniraj
         </h2>
-        <p
+        <div
           style={{
             fontSize: "20px",
-            textAlign: "center",
             color: "#A8A7AF",
             margin: isLarge
               ? "0 200px 0px 200px"
@@ -184,14 +183,16 @@ const Help = () => {
             lineHeight: "1.8",
           }}
         >
+          <p>
           Donacije su ono što nam omogućava adekvatnu brigu o našim štićenicima.
           Donirati možete novac, hranu, dekice, dotrajalu posteljinu, sredstva
           protiv nametnika i sve ostalo što bi nam moglo koristiti u radu. Ako
           se odlučite donirati novac, to možete učiniti na naše račun: Račun za
           donacije:
-           <p>HR6723600001102587785, ZABAHR2X </p>
-         <p>  paypal:sigurnakucica@gmail.com</p>
-        </p>
+          </p>
+           <p style={{textAlign: "center"}}>HR6723600001102587785, ZABAHR2X </p>
+         <p style={{textAlign: "center"}}>  paypal:sigurnakucica@gmail.com</p>
+        </div>
       </div>
     </div>
   )
