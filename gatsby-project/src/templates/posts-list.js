@@ -6,8 +6,10 @@ import PozadinskaSlika from "../components/pozadinskaslika"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogExcerpt from "../components/blog-excerpt"
+import useMediaQuery from "react-use-media-query-hook"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
 import SearchIcon from "../components/searchicon"
+
 
 const BlogList = ({
   pageContext,
@@ -56,13 +58,14 @@ const BlogList = ({
   const { filteredData, query } = state
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts1 = hasSearchResults ? filteredData : posts
+  const isLarge = useMediaQuery("(min-width: 480px)")
 
 
   return (
     <Layout>
       <SEO title="Blog" />
       <PozadinskaSlika naziv={"Blog"}/>
-      <div style={{marginLeft:"100px",marginRight:"100px",position:"relative",paddingLeft:"10px",borderTop:"1px solid #78758E",borderBottom:"1px solid #78758E"}}>
+      <div style={{marginLeft: isLarge ?"100px" : "50px",marginRight: isLarge ? "100px" : "50px",position:"relative",paddingLeft:"10px",borderTop:"1px solid #78758E",borderBottom:"1px solid #78758E"}}>
           <input
               type="text"
               aria-label="Search"
@@ -72,11 +75,11 @@ const BlogList = ({
                 marginTop:"5px",
                 marginBottom:"5px",
                 py: 2,
-                paddingLeft: 4,
-                overflow: "hidden",
+                paddingLeft:  4,
+                overflow:  "hidden",
                 borderWidth: 0,
                 color: "text",
-                fontSize: 1,
+                fontSize:  1 ,
                 fontWeight: "medium",
                 "&:focus": {
                   outline: "none",

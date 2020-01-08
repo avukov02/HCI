@@ -25,18 +25,18 @@ const About = () => {
     >
       <div
         style={{
-          fontSize: "20px",
+          fontSize: isLarge ? "20px" : "18px ",
           color: "#A8A7AF",
           margin: isLarge
-            ? "0 200px 0 200px"
+            ? "0 150px 0px 150px"
             : isnotLargeatAll
-            ? "0 50px 0 50px"
-            : "0 20px 0 20px",
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 50px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}
       >
-       <p style={{textAlign: "left"}}> Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
+       <p style={{textAlign: "center"}}> Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
         Velike Gorice i pomažemo udomljavati pse iz skloništa. S obzirom da
         preuzimamo i pse na skrb do udomljenja i najmanja donacija omogućuje nam
         rad i svakodnevnu brigu o njima. Budite uz nas.
@@ -74,13 +74,13 @@ const About = () => {
       </div>
       <div
         style={{
-          fontSize: "20px",
+          fontSize: isLarge ? "20px" : "18px ",
           color: "#A8A7AF",
           margin: isLarge
-            ? "0 200px 0 200px"
+            ? "0 150px 0px 150px"
             : isnotLargeatAll
-            ? "0 50px 0 50px"
-            : "0 20px 0 20px",
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 50px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}

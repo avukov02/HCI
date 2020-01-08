@@ -20,14 +20,14 @@ const Help = () => {
           flexDirection: "column",
           justifyContent: "space-around",
           alignItems: "center",
-          margin: "0px -8px 20px -8px",
-          padding: isLarge ? "30px 0 30px 0" : "0",
+          margin: isLarge ? "0px 10px 20px 10px" : "0px 20px 20px 20px",
+          padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
         }}
       >
         <h2
           style={{
             color: "#9AD1C4",
-            fontSize: "35px",
+            fontSize: isLarge ? "35px" : "33px ",
             marginTop: "0px",
             textAlign: "left",
           }}
@@ -36,14 +36,14 @@ const Help = () => {
         </h2>
         <p
           style={{
-            fontSize: "20px",
+            fontSize: isLarge ? "20px" : "18px ",
             textAlign: "left",
             color: "#A8A7AF",
             margin: isLarge
-              ? "0 200px 0px 200px"
-              : isnotLargeatAll
-              ? "0 50px 70px 50px"
-              : "0 20px 70px 20px",
+            ? "0 150px 0px 150px"
+            : isnotLargeatAll
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 50px",
             letterSpacing: "1px",
             lineHeight: "1.8",
           }}
@@ -106,7 +106,7 @@ const Help = () => {
         <h2
           style={{
             color: "#9AD1C4",
-            fontSize: "35px",
+            fontSize: isLarge ? "35px" : "33px ",
             marginTop: "0px",
             textAlign: "left",
           }}
@@ -122,14 +122,14 @@ const Help = () => {
     marginRight:"50px"}}>Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što su neprocjenjivi.</p>
         <p
           style={{
-            fontSize: "20px",
+            fontSize: isLarge ? "20px" : "18px ",
             textAlign: "left",
             color: "#A8A7AF",
             margin: isLarge
-              ? "0 200px 0px 200px"
-              : isnotLargeatAll
-              ? "0 50px 70px 50px"
-              : "0 20px 70px 20px",
+            ? "0 150px 0px 150px"
+            : isnotLargeatAll
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 50px",
             letterSpacing: "1px",
             lineHeight: "1.8",
           }}
@@ -163,7 +163,7 @@ const Help = () => {
         <h2
           style={{
             color: "#9AD1C4",
-            fontSize: "35px",
+            fontSize: isLarge ? "35px" : "33px ",
             marginTop: "0px",
             textAlign: "left",
           }}
@@ -172,13 +172,13 @@ const Help = () => {
         </h2>
         <div
           style={{
-            fontSize: "20px",
+            fontSize: isLarge ? "20px" : "18px ",
             color: "#A8A7AF",
             margin: isLarge
-              ? "0 200px 0px 200px"
-              : isnotLargeatAll
-              ? "0 50px 70px 50px"
-              : "0 20px 70px 20px",
+            ? "0 150px 0px 150px"
+            : isnotLargeatAll
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 50px",
             letterSpacing: "1px",
             lineHeight: "1.8",
           }}

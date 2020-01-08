@@ -41,6 +41,7 @@ const IndexPage = ({ data}) => {
   const posts=data.second.posts
   const isLarge = useMediaQuery("(min-width: 900px)")
   const isnotLargeatAll = useMediaQuery("(min-width:650px)")
+  const isnotLarge=useMediaQuery("(min-width:530px)")
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />
@@ -67,15 +68,16 @@ const IndexPage = ({ data}) => {
           justifyContent: "center",
         }}
       >
-        <p style={{ textAlign:"center",color: "#78758E", fontSize: "30px", marginTop: "10px" }}>
+        <p style={{ textAlign:"center",color: "#78758E", fontSize: "30px", marginTop: isLarge ? "10px" : "-20px" }}>
           Najnovije s bloga
         </p>
         <div style={{display: "grid",
       gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
       gridColumnGap: "100px",
       justifyItems:"center",
-      paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",
-      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",}} >
+      paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "60px",
+      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "60px",
+      textAlign: isnotLarge ? "left" : "center"}} >
       <BlogExcerpt posts={posts} />
       </div>
 

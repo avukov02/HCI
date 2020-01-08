@@ -14,17 +14,17 @@ const Sigurna = () => {
         justifyContent: "space-around",
         alignItems: "center",
         margin: "0px -8px 20px -8px",
-        padding: isLarge ? "30px 0 30px 0" : "0",
+        padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
       }}
     >
-      <p style={{ color: "#78758E", fontSize: "25px", textAlign: "center" }}>
-        {" "}
+      <p style={{ color: "#78758E", fontSize: isLarge ? "25px" : "23px ", textAlign: "center"}}>
+   
         Udruga za udomljavanje napuštenih pasa
       </p>
       <h2
         style={{
           color: "#9AD1C4",
-          fontSize: "35px",
+          fontSize: isLarge ? "35px" : "33px ",
           marginTop: "0px",
           textAlign: "center",
         }}
@@ -33,14 +33,14 @@ const Sigurna = () => {
       </h2>
       <p
         style={{
-          fontSize: "20px",
+          fontSize: isLarge ? "20px" : "18px ",
           textAlign: "center",
           color: "#A8A7AF",
           margin: isLarge
-            ? "0 200px 0px 200px"
+            ? "0 150px 0px 150px"
             : isnotLargeatAll
             ? "0 50px 70px 50px"
-            : "0 20px 70px 20px",
+            : "0 50px 70px 50px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}

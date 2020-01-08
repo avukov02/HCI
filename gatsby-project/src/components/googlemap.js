@@ -1,5 +1,6 @@
 import React from "react"
 import GoogleMapReact from "google-map-react"
+import useMediaQuery from "react-use-media-query-hook"
 
 const defaultProps = {
   center: {
@@ -11,8 +12,11 @@ const defaultProps = {
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 
-const GoogleMap = () => (
-  <div style={{ display: "flex", height: "220px", width: "320px" }}>
+const GoogleMap = () => {
+  const isLarge = useMediaQuery("(min-width: 500px)")
+  return(
+ 
+  <div style={{ display: "flex", height: isLarge ? "220px" : "200px", width: isLarge ? "320px" : "250px" }}>
     <GoogleMapReact
       bootstrapURLKeys={{ key: process.env.GOOGLE_MAPS_API_KEY }}
       defaultCenter={defaultProps.center}
@@ -26,6 +30,7 @@ const GoogleMap = () => (
     </GoogleMapReact>
   </div>
 )
+ }
 
 export default GoogleMap
 

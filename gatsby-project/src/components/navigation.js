@@ -19,7 +19,7 @@ const Navigation = ({ menuItems }) => {
       <nav sx={{display:"inline-block"}}>
         <NavigationLinks menuItems={menuItems} />
       </nav>
-      <Doniraj />
+      <Doniraj menuItem={menuItems[2]}/>
     </Header>
   )
 }

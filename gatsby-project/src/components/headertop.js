@@ -4,18 +4,18 @@ import useMediaQuery from 'react-use-media-query-hook';
 
 const Headertop = () => {
   const isLarge = useMediaQuery('(min-width: 700px)');
-  const Hide=useMediaQuery('(min-width: 340px)');
+  const Hide=useMediaQuery('(min-width: 440px)');
   return (
     <div
       style={isLarge ? style1 : style2}
     >
       <div
         style={{
-          display: Hide ? "flex": "grid",
+          display: Hide ? "flex": "none",
           flexDirection: "row",
         }}
       >
-        <p style={{ marginRight: "10px", color: "#78758E" }}>
+        <p style={{ marginRight: "10px", color: "#78758E"}}>
           Kontaktirajte nas na: 091234568
         </p>
         <p style={{ color: "#78758E" }}>sigurnakucica@gmail.com</p>
@@ -24,7 +24,7 @@ const Headertop = () => {
         <button
           sx={{
             display: "inline-block",
-            margin: "6px 2px",
+            margin: Hide ? "6px 2px" : "12px 2px",
             padding: "5px 15px",
             fontSize: "15px",
             cursor: "pointer",
@@ -49,7 +49,7 @@ const Headertop = () => {
         <button
           sx={{
             display: "inline-block",
-            margin: "6px 2px",
+            margin: Hide ? "6px 2px" : "12px 2px",
             padding: "5px 15px",
             fontSize: "15px",
             cursor: "pointer",

@@ -32,8 +32,8 @@ const Udomljavanje = ({ pageContext,data: {
         gridColumnGap: "10px",
         gridRowGap:"10px",
         justifyItems:"center",
-        paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",
-      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "50px",
+        paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "20px",
+      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "20px",
         marginBottom:"10px",
       }}>
      <UdomiExcerpt psi={psi} />
