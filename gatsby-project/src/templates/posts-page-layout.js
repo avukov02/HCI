@@ -15,20 +15,21 @@ export default ({ pageContext, data }) => {
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
-      <PozadinskaSlika naziv={"Blog"}/>
-      <div style={{
-        display:"block",
-        width:"80%",
-        margin: "0 auto"
-        
-      }}>
-      <Title>{post.frontmatter.title}</Title>
-      <span sx={{ fontWeight: "400", fontSize: "1.1em", color: "#a0aec0" }}>
-        {post.frontmatter.date}
-      </span>
-      <div>
-      <MDXRenderer>{post.body}</MDXRenderer>
-      </div>
+      <PozadinskaSlika naziv={"Blog"} />
+      <div
+        style={{
+          display: "block",
+          width: "80%",
+          margin: "0 auto",
+        }}
+      >
+        <Title>{post.frontmatter.title}</Title>
+        <span sx={{ fontWeight: "400", fontSize: "1.1em", color: "#a0aec0" }}>
+          {post.frontmatter.date}
+        </span>
+        <div>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </div>
       </div>
 
       <BlogNav>

@@ -16,10 +16,10 @@ const Navigation = ({ menuItems }) => {
   return (
     <Header sx={{ justifyContent: "center", alignContent: "center" }}>
       <Logo />
-      <nav sx={{display:"inline-block"}}>
+      <nav sx={{ display: "inline-block" }}>
         <NavigationLinks menuItems={menuItems} />
       </nav>
-      <Doniraj menuItem={menuItems[2]}/>
+      <Doniraj menuItem={menuItems[2]} />
     </Header>
   )
 }

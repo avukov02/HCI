@@ -16,20 +16,21 @@ export default ({ pageContext, data }) => {
   return (
     <Layout>
       <SEO title={pas.frontmatter.name} />
-      <PozadinskaSlika naziv={"Udomi"}/>
-      <div style={{
-        display:"block",
-        width:"80%",
-        margin: "0 auto"
-        
-      }}>
-      <Title>{pas.frontmatter.name}</Title>
-      <div>
-      <MDXRenderer>{pas.body}</MDXRenderer>
-      </div>
-      <div>
-          <Img fixed={pas.frontmatter.image.childImageSharp.fixed}/>
-      </div>
+      <PozadinskaSlika naziv={"Udomi"} />
+      <div
+        style={{
+          display: "block",
+          width: "80%",
+          margin: "0 auto",
+        }}
+      >
+        <Title>{pas.frontmatter.name}</Title>
+        <div>
+          <MDXRenderer>{pas.body}</MDXRenderer>
+        </div>
+        <div>
+          <Img fixed={pas.frontmatter.image.childImageSharp.fixed} />
+        </div>
       </div>
 
       <BlogNav>
@@ -56,8 +57,8 @@ export default ({ pageContext, data }) => {
 }
 
 export const query = graphql`
-query Udomi($slug: String) {
-    pas: mdx(frontmatter: {slug: {eq: $slug}}) {
+  query Udomi($slug: String) {
+    pas: mdx(frontmatter: { slug: { eq: $slug } }) {
       id
       frontmatter {
         slug
@@ -65,7 +66,7 @@ query Udomi($slug: String) {
         image {
           childImageSharp {
             fixed(width: 316, height: 344) {
-                ...GatsbyImageSharpFixed
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -73,5 +74,4 @@ query Udomi($slug: String) {
       body
     }
   }
-  
 `

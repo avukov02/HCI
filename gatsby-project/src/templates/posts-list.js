@@ -10,7 +10,6 @@ import useMediaQuery from "react-use-media-query-hook"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
 import SearchIcon from "../components/searchicon"
 
-
 const BlogList = ({
   pageContext,
   data: {
@@ -31,21 +30,20 @@ const BlogList = ({
   const handleInputChange = event => {
     console.log(event.target.value)
     const query = event.target.value
-    const allposts= posts || []
+    const allposts = posts || []
     // this is how we get all of our posts
-     // return all filtered posts
-    const filteredData = allposts.filter(({post}) => {
+    // return all filtered posts
+    const filteredData = allposts.filter(({ post }) => {
       // destructure data from post frontmatter
-      const { title,date } = post.frontmatter
-      const {excerpt}=post
+      const { title, date } = post.frontmatter
+      const { excerpt } = post
       return (
         // standardize data with .toLowerCase()
         // return true if the description, title or tags
         // contains the query string
         excerpt.toLowerCase().includes(query.toLowerCase()) ||
         title.toLowerCase().includes(query.toLowerCase()) ||
-        date.toLowerCase().includes(query.toLowerCase()) 
-        
+        date.toLowerCase().includes(query.toLowerCase())
       )
     })
     // update state according to the latest query and results
@@ -60,36 +58,42 @@ const BlogList = ({
   const posts1 = hasSearchResults ? filteredData : posts
   const isLarge = useMediaQuery("(min-width: 480px)")
 
-
   return (
     <Layout>
       <SEO title="Blog" />
-      <PozadinskaSlika naziv={"Blog"}/>
-      <div style={{marginLeft: isLarge ?"100px" : "50px",marginRight: isLarge ? "100px" : "50px",position:"relative",paddingLeft:"10px",borderTop:"1px solid #78758E",borderBottom:"1px solid #78758E"}}>
-          <input
-              type="text"
-              aria-label="Search"
-              placeholder="Type to filter posts..."
-              onChange={handleInputChange}
-              sx={{
-                marginTop:"5px",
-                marginBottom:"5px",
-                py: 2,
-                paddingLeft:  4,
-                overflow:  "hidden",
-                borderWidth: 0,
-                color: "text",
-                fontSize:  1 ,
-                fontWeight: "medium",
-                "&:focus": {
-                  outline: "none",
-                  backgroundColor: "#9AD1C4",
-                },
-              }}
-          />
-          <div style={{position: "absolute",
-              left: "18px",
-              top: "50%",}}>
+      <PozadinskaSlika naziv={"Blog"} />
+      <div
+        style={{
+          marginLeft: isLarge ? "100px" : "50px",
+          marginRight: isLarge ? "100px" : "50px",
+          position: "relative",
+          paddingLeft: "10px",
+          borderTop: "1px solid #78758E",
+          borderBottom: "1px solid #78758E",
+        }}
+      >
+        <input
+          type="text"
+          aria-label="Search"
+          placeholder="Type to filter posts..."
+          onChange={handleInputChange}
+          sx={{
+            marginTop: "5px",
+            marginBottom: "5px",
+            py: 2,
+            paddingLeft: 4,
+            overflow: "hidden",
+            borderWidth: 0,
+            color: "text",
+            fontSize: 1,
+            fontWeight: "medium",
+            "&:focus": {
+              outline: "none",
+              backgroundColor: "#9AD1C4",
+            },
+          }}
+        />
+        <div style={{ position: "absolute", left: "18px", top: "50%" }}>
           <SearchIcon
             sx={{
               width: 4,
@@ -98,15 +102,19 @@ const BlogList = ({
               transform: "translateY(-50%)",
             }}
           />
-          </div>
         </div>
-      <div style={{display: "grid",
-      gridTemplateRows:"auto auto auto",
-      gridColumnGap: "10px",
-      justifyItems:"center",
-      paddingLeft: "100px",
-      paddingRight: "100px"}} >
-      <BlogExcerpt posts={posts1} />
+      </div>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateRows: "auto auto auto",
+          gridColumnGap: "10px",
+          justifyItems: "center",
+          paddingLeft: "100px",
+          paddingRight: "100px",
+        }}
+      >
+        <BlogExcerpt posts={posts1} />
       </div>
       <BlogNav>
         <BlogNav.Previous>
@@ -155,4 +163,3 @@ export const query = graphql`
     }
   }
 `
-
