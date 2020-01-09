@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import useMediaQuery from "react-use-media-query-hook"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const Sigurna = () => {
   const isLarge = useMediaQuery("(min-width: 900px)")
@@ -17,8 +17,13 @@ const Sigurna = () => {
         padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
       }}
     >
-      <p style={{ color: "#78758E", fontSize: isLarge ? "25px" : "23px ", textAlign: "center"}}>
-   
+      <p
+        style={{
+          color: "#78758E",
+          fontSize: isLarge ? "25px" : "23px ",
+          textAlign: "center",
+        }}
+      >
         Udruga za udomljavanje napuštenih pasa
       </p>
       <h2

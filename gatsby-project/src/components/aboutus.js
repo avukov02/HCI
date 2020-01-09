@@ -2,7 +2,7 @@
 import { jsx } from "theme-ui"
 import Img from "gatsby-image"
 import { graphql, StaticQuery } from "gatsby"
-import useMediaQuery from "react-use-media-query-hook"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 function renderImage({ file }) {
   return <Img fluid={file.childImageSharp.fluid} />
@@ -36,17 +36,17 @@ const About = () => {
           lineHeight: "1.8",
         }}
       >
-       <p style={{textAlign: "center"}}> Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
-        Velike Gorice i pomažemo udomljavati pse iz skloništa. S obzirom da
-        preuzimamo i pse na skrb do udomljenja i najmanja donacija omogućuje nam
-        rad i svakodnevnu brigu o njima. Budite uz nas.
+        <p style={{ textAlign: "center" }}>
+          {" "}
+          Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
+          Velike Gorice i pomažemo udomljavati pse iz skloništa. S obzirom da
+          preuzimamo i pse na skrb do udomljenja i najmanja donacija omogućuje
+          nam rad i svakodnevnu brigu o njima. Budite uz nas.
         </p>
-        <p style={{textAlign: "center"}}>
-        Račun za donacije: HR6723600001102587785, ZABAHR2X
+        <p style={{ textAlign: "center" }}>
+          Račun za donacije: HR6723600001102587785, ZABAHR2X
         </p>
-        <p style={{textAlign: "center"}}>
-        paypal: sigurnakucica@gmail.com
-        </p>
+        <p style={{ textAlign: "center" }}>paypal: sigurnakucica@gmail.com</p>
       </div>
       <div
         style={{

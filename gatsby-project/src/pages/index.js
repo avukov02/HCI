@@ -12,7 +12,7 @@ import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
 import "react-image-gallery/styles/css/image-gallery.css"
 import BlogExcerpt from "../components/blog-excerpt"
-import useMediaQuery from "react-use-media-query-hook"
+import { useMediaQuery } from "react-responsive"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
     text:"Naslovna",
@@ -39,9 +39,9 @@ const menuItems=[ //niz u kojem su svi linkovi
 
 const IndexPage = ({ data }) => {
   const posts = data.second.posts
-  const isLarge = useMediaQuery("(min-width: 900px)")
-  const isnotLargeatAll = useMediaQuery("(min-width:650px)")
-  const isnotLarge = useMediaQuery("(min-width:530px)")
+  const isLarge = useMediaQuery({ minWidth: 900 })
+  const isnotLargeatAll = useMediaQuery({ minWidth: 650 })
+  const isnotLarge = useMediaQuery({ minWidth: 530 })
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />

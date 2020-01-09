@@ -1,21 +1,19 @@
 /** @jsx jsx */
-import { jsx} from "theme-ui"
-import useMediaQuery from 'react-use-media-query-hook';
+import { jsx } from "theme-ui"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const Headertop = () => {
-  const isLarge = useMediaQuery('(min-width: 700px)');
-  const Hide=useMediaQuery('(min-width: 440px)');
+  const isLarge = useMediaQuery("(min-width: 700px)")
+  const Hide = useMediaQuery("(min-width: 440px)")
   return (
-    <div
-      style={isLarge ? style1 : style2}
-    >
+    <div style={isLarge ? style1 : style2}>
       <div
         style={{
-          display: Hide ? "flex": "none",
+          display: Hide ? "flex" : "none",
           flexDirection: "row",
         }}
       >
-        <p style={{ marginRight: "10px", color: "#78758E"}}>
+        <p style={{ marginRight: "10px", color: "#78758E" }}>
           Kontaktirajte nas na: 091234568
         </p>
         <p style={{ color: "#78758E" }}>sigurnakucica@gmail.com</p>
@@ -78,7 +76,7 @@ const Headertop = () => {
 
 export default Headertop
 
-const style1={
+const style1 = {
   marginTop: "-10px",
   display: "flex",
   flexDirection: "row",
@@ -86,7 +84,7 @@ const style1={
   borderBottom: "1px solid #78758E",
 }
 
-const style2={
+const style2 = {
   marginTop: "-10px",
   display: "grid",
   justifyItems: "center",
