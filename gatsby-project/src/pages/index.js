@@ -37,11 +37,11 @@ const menuItems=[ //niz u kojem su svi linkovi
 ]
 */
 
-const IndexPage = ({ data}) => {
-  const posts=data.second.posts
+const IndexPage = ({ data }) => {
+  const posts = data.second.posts
   const isLarge = useMediaQuery("(min-width: 900px)")
   const isnotLargeatAll = useMediaQuery("(min-width:650px)")
-  const isnotLarge=useMediaQuery("(min-width:530px)")
+  const isnotLarge = useMediaQuery("(min-width:530px)")
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />
@@ -63,24 +63,38 @@ const IndexPage = ({ data}) => {
       <div
         style={{
           display: "flex",
-          flexDirection:"column",
-          
+          flexDirection: "column",
+
           justifyContent: "center",
         }}
       >
-        <p style={{ textAlign:"center",color: "#78758E", fontSize: "30px", marginTop: isLarge ? "10px" : "-20px" }}>
+        <p
+          style={{
+            textAlign: "center",
+            color: "#78758E",
+            fontSize: "30px",
+            marginTop: isLarge ? "10px" : "-20px",
+          }}
+        >
           Najnovije s bloga
         </p>
-        <div style={{display: "grid",
-      gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
-      gridColumnGap: "100px",
-      justifyItems:"center",
-      paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "60px",
-      paddingRight: isLarge ? "100px" : isnotLargeatAll ? "100px" : "60px",
-      textAlign: isnotLarge ? "left" : "center"}} >
-      <BlogExcerpt posts={posts} />
-      </div>
-
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
+            gridColumnGap: "100px",
+            justifyItems: "center",
+            paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "60px",
+            paddingRight: isLarge
+              ? "100px"
+              : isnotLargeatAll
+              ? "100px"
+              : "60px",
+            textAlign: isnotLarge ? "left" : "center",
+          }}
+        >
+          <BlogExcerpt posts={posts} />
+        </div>
       </div>
     </Layout>
   )
@@ -88,11 +102,11 @@ const IndexPage = ({ data}) => {
 
 export default IndexPage
 
-
 export const query = graphql`
-query
-  {
-   first:allFile(filter: { absolutePath: { regex: "//content/background/" } }) {
+  query {
+    first: allFile(
+      filter: { absolutePath: { regex: "//content/background/" } }
+    ) {
       edges {
         node {
           id
@@ -105,24 +119,25 @@ query
         }
       }
     }
-  
-    second:allMdx(
-      sort: {fields: [frontmatter___date], order: DESC}, limit: 3, 
-      filter: {fileAbsolutePath: {regex: "//content/blog//"}}) {
-        posts: edges {
-          post: node {
-            id
-            excerpt
-            frontmatter {
-              title
-              date(formatString: "MMMM DD, YYYY")
-              slug
-            }
+
+    second: allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
+      filter: { fileAbsolutePath: { regex: "//content/blog//" } }
+    ) {
+      posts: edges {
+        post: node {
+          id
+          excerpt
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+            slug
           }
         }
       }
     }
-    
+  }
 `
 
 //<Img> kompontenta za unos slika, blura ih...
