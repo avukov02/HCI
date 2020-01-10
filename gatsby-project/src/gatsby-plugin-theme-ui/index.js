@@ -10,13 +10,13 @@ const theme = {
     ...tailwind.sizes,
     container: "1024px",
     logo: "60px",
-    more:"25px",
+    more: "25px",
     navLinkBorder: "3px",
-    footerimg:"50px"
+    footerimg: "50px",
   },
-  colors:{
-     primaryHover:"#78758E",
-     accent:"#78758E"
+  colors: {
+    primaryHover: "#78758E",
+    accent: "#78758E",
   },
   shadows: {
     ...tailwind.shadows,
@@ -35,11 +35,11 @@ const theme = {
       marginRight: 0,
       fontStyle: "italic",
     },
-    p:{
+    p: {
       ...tailwind.styles.p,
       fontSize: [1, 1, 1, 2],
       mt: 4,
-      color:"#808080"
+      color: "#808080",
     },
     h1: {
       ...tailwind.styles.h1,
@@ -55,17 +55,17 @@ const theme = {
       ...tailwind.styles.h3,
       fontSize: [2, 2, 3, 3],
       mt: 4,
-      color:"#9AD1C4"
+      color: "#9AD1C4",
     },
     h4: {
       ...tailwind.styles.h4,
       fontSize: [1, 1, 2, 2],
       mt: 4,
     },
-    a:{
+    a: {
       ...tailwind.styles.a,
-      color:"#9AD1C4"
-    }
+      color: "#9AD1C4",
+    },
   },
 }
 

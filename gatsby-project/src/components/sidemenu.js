@@ -23,11 +23,11 @@ const SideMenu = ({ menuItems }) => {
     >
       {menuItems.map(({ link, text }) => (
         <Link
-        key={link}
+          key={link}
           to={link}
           sx={{
             m: 2,
-            px: 3,
+            px: 2,
             py: 2,
             color: "#78758E",
             textDecoration: "none",

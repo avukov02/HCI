@@ -89,4 +89,6 @@ const style2 = {
   display: "grid",
   justifyItems: "center",
   borderBottom: "1px solid #78758E",
+  marginRight: "-8px",
+  marginLeft: "-8px",
 }

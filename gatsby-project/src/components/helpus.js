@@ -9,87 +9,83 @@ function renderImage({ file }) {
 }
 
 const Help = () => {
-  const isLarge = useMediaQuery("(min-width: 900px)")
-  const isnotLargeatAll = useMediaQuery("(max-width: 900px,min-width:600px)")
+  const isLarge = useMediaQuery("(min-width: 1000px)")
+  const isnotLargeatAll = useMediaQuery("(max-width: 1000px,min-width:600px)")
   return (
-    <div>
-      <div
+    <div
+      style={{
+        backgroundColor: "white",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-around",
+        alignItems: "center",
+        margin: isLarge ? "0px 10px 20px 10px" : "0px 0px 20px 00px",
+        padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
+      }}
+    >
+      <h2
         style={{
-          backgroundColor: "white",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-around",
-          alignItems: "center",
-          margin: isLarge ? "0px 10px 20px 10px" : "0px 20px 20px 20px",
-          padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
+          color: "#9AD1C4",
+          fontSize: isLarge ? "35px" : "33px ",
+          marginTop: "0px",
+          textAlign: "center",
         }}
       >
-        <h2
-          style={{
-            color: "#9AD1C4",
-            fontSize: isLarge ? "35px" : "33px ",
-            marginTop: "0px",
-            textAlign: "left",
-          }}
-        >
-          Privremeno skrbništvo
-        </h2>
-        <p
-          style={{
-            fontSize: isLarge ? "20px" : "18px ",
-            textAlign: "left",
-            color: "#A8A7AF",
-            margin: isLarge
-              ? "0 150px 0px 150px"
-              : isnotLargeatAll
-              ? "0 50px 70px 50px"
-              : "0 50px 70px 50px",
-            letterSpacing: "1px",
-            lineHeight: "1.8",
-          }}
-        >
-          Privremeno skrbništvo je veoma cijenjena i dobrodošla pomoć u našoj
-          udruzi. Kako broj napuštenih životinja premašuje broj slobodnih mjesta
-          u azilu, uvijek su nam potrebne tete i stričeki čuvalice. Privremeno
-          udomiteljstvo podrazumijeva da ćete na smještaj primiti nekog od naših
-          štićenika. Trajanje takvog udomiteljstva odredit ćete na samom početku
-          u dogovoru s članovima udruge te ćete za to vrijeme voditi adekvatnu
-          brigu o životinji koja Vam je povjerena na skrb. Udruga na takvom
-          smještaju plaća sve troškove koje životinja ima, ali se čuvalice
-          obvezuju redovito slati fotografije životinje koju imaju na smještaju
-          (osim ako se dogovori da će netko drugi odraditi taj dio) te brinuti o
-          njima) te, kao što smo već rekli, adekvatno brinuti o njoj. Kako biste
-          i Vi i mi bili sigurni da će sve dobro funkcionirati, privremenim
-          udomiteljima dajemo na potpis Ugovor o pivremenom udomiteljstvu koji
-          regulira obostrana prava i obveze. Ako želite pomoći nekoj životinji,
-          a niste u mogućnosti trajno je udomiti, ovo je pravi izbor za Vas.
-          Ukoliko ste zainteresirani za ovakav vid pomoći, javite nam se što
-          prije – čuvalica nikad dosta!
-        </p>
-        <div
-          style={{
-            marginTop: "50px",
-            marginBottom: "20px",
-            position: "relative",
-            minWidth: "250px",
-            minHeigh: "100px",
-          }}
-        >
-          <StaticQuery
-            query={graphql`
-              query {
-                file(relativePath: { eq: "images/udomime.png" }) {
-                  childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid
-                    }
+        Privremeno skrbništvo
+      </h2>
+      <p
+        style={{
+          fontSize: isLarge ? "20px" : "18px ",
+          color: "#A8A7AF",
+          margin: isLarge
+            ? "0 150px 0px 150px"
+            : isnotLargeatAll
+            ? "0 50px 50px 50px"
+            : "0 50px 50px 50px",
+          letterSpacing: "1px",
+          lineHeight: "1.8",
+        }}
+      >
+        Privremeno skrbništvo je veoma cijenjena i dobrodošla pomoć u našoj
+        udruzi. Kako broj napuštenih životinja premašuje broj slobodnih mjesta u
+        azilu, uvijek su nam potrebne tete i stričeki čuvalice. Privremeno
+        udomiteljstvo podrazumijeva da ćete na smještaj primiti nekog od naših
+        štićenika. Trajanje takvog udomiteljstva odredit ćete na samom početku u
+        dogovoru s članovima udruge te ćete za to vrijeme voditi adekvatnu brigu
+        o životinji koja Vam je povjerena na skrb. Udruga na takvom smještaju
+        plaća sve troškove koje životinja ima, ali se čuvalice obvezuju redovito
+        slati fotografije životinje koju imaju na smještaju (osim ako se
+        dogovori da će netko drugi odraditi taj dio) te brinuti o njima) te, kao
+        što smo već rekli, adekvatno brinuti o njoj. Kako biste i Vi i mi bili
+        sigurni da će sve dobro funkcionirati, privremenim udomiteljima dajemo
+        na potpis Ugovor o pivremenom udomiteljstvu koji regulira obostrana
+        prava i obveze. Ako želite pomoći nekoj životinji, a niste u mogućnosti
+        trajno je udomiti, ovo je pravi izbor za Vas. Ukoliko ste zainteresirani
+        za ovakav vid pomoći, javite nam se što prije – čuvalica nikad dosta!
+      </p>
+      <div
+        style={{
+          marginTop: isLarge ? "30px" : "-10px",
+          marginBottom: "30px",
+          position: "relative",
+          minWidth: "250px",
+          minHeigh: "100px",
+        }}
+      >
+        <StaticQuery
+          query={graphql`
+            query {
+              file(relativePath: { eq: "images/udomime.png" }) {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
-            `}
-            render={renderImage}
-          />
-        </div>
+            }
+          `}
+          render={renderImage}
+        />
       </div>
 
       <div
@@ -108,7 +104,7 @@ const Help = () => {
             color: "#9AD1C4",
             fontSize: isLarge ? "35px" : "33px ",
             marginTop: "0px",
-            textAlign: "left",
+            textAlign: "center",
           }}
         >
           Volontiraj
@@ -122,6 +118,7 @@ const Help = () => {
             color: "#C6DAD5",
             marginLeft: "50px",
             marginRight: "50px",
+            textAlign: "left",
           }}
         >
           Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što
@@ -130,7 +127,6 @@ const Help = () => {
         <p
           style={{
             fontSize: isLarge ? "20px" : "18px ",
-            textAlign: "left",
             color: "#A8A7AF",
             margin: isLarge
               ? "0 150px 0px 150px"
@@ -172,7 +168,7 @@ const Help = () => {
             color: "#9AD1C4",
             fontSize: isLarge ? "35px" : "33px ",
             marginTop: "0px",
-            textAlign: "left",
+            textAlign: "center",
           }}
         >
           Doniraj

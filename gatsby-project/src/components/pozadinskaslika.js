@@ -24,7 +24,7 @@ const PozadinskaSlika = ({ naziv }) => {
         <BackgroundImage
           fluid={data.file.childImageSharp.fluid}
           style={{
-            height: "300px",
+            height: isNotLarge ? "300px" : "200px",
             margin: "-14px -8px 20px -8px",
             position: "relative",
           }}
@@ -45,6 +45,8 @@ const PozadinskaSlika = ({ naziv }) => {
                 fontSize: isLarge ? "40px" : IsSmall ? "33px" : "28px",
                 fontWeight: "bold",
                 color: "white",
+                maxWidth: isLarge ? "220px" : IsSmall ? "150px" : "110px",
+                textAlign: "left",
               }}
             >
               {naziv}

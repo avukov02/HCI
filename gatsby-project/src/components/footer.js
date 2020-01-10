@@ -24,6 +24,7 @@ const Footer = () => {
           justifyContent: "center",
           marginTop: "20px",
           color: "#76DFC5",
+          textAlign: "center",
         }}
       >
         Ⓒ 2019 Sigurna Kućica - All rights reserved

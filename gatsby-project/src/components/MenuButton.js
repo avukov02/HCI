@@ -58,6 +58,9 @@ class MoreButton extends React.Component {
           },
         }}
         onClick={this.ClickMoreButton}
+        onKeyDown={this.ClickMoreButton}
+        role="button"
+        tabIndex={0}
       >
         <img
           alt="vise"
