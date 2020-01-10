@@ -6,7 +6,7 @@ import PozadinskaSlika from "../components/pozadinskaslika"
 import SEO from "../components/seo"
 import Layout from "../components/layout"
 import BlogExcerpt from "../components/blog-excerpt"
-import { useMediaQuery } from "react-responsive"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
 import SearchIcon from "../components/searchicon"
 
@@ -56,7 +56,7 @@ const BlogList = ({
   const { filteredData, query } = state
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts1 = hasSearchResults ? filteredData : posts
-  const isLarge = useMediaQuery({ minWidth: 480 })
+  const isLarge = useMediaQuery("(min-width: 480px)")
 
   return (
     <Layout>

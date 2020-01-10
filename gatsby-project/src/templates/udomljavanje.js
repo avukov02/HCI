@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import PozadinskaSlika from "../components/pozadinskaslika"
 import SEO from "../components/seo"
 import UdomiExcerpt from "../components/udomi-excerpt"
-import { useMediaQuery } from "react-responsive"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const Udomljavanje = ({
   pageContext,
@@ -14,8 +14,8 @@ const Udomljavanje = ({
     allMdx: { psi },
   },
 }) => {
-  const isLarge = useMediaQuery({ minWidth: 900 })
-  const isnotLargeatAll = useMediaQuery({ minWidth: 650 })
+  const isLarge = useMediaQuery("(min-width: 900px)")
+  const isnotLargeatAll = useMediaQuery("(min-width: 650px)")
   const { currentPage, numofPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numofPages

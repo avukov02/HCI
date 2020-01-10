@@ -10,9 +10,9 @@ import SEO from "../components/seo"
 import { graphql } from "gatsby"
 import ImageGallery from "react-image-gallery"
 import Sigurna from "../components/sigurna"
-import "react-image-gallery/styles/css/image-gallery.css"
+import "../components/image-gallery.css"
 import BlogExcerpt from "../components/blog-excerpt"
-import { useMediaQuery } from "react-responsive"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
     text:"Naslovna",
@@ -39,9 +39,9 @@ const menuItems=[ //niz u kojem su svi linkovi
 
 const IndexPage = ({ data }) => {
   const posts = data.second.posts
-  const isLarge = useMediaQuery({ minWidth: 900 })
-  const isnotLargeatAll = useMediaQuery({ minWidth: 650 })
-  const isnotLarge = useMediaQuery({ minWidth: 530 })
+  const isLarge = useMediaQuery("(min-width: 900px)")
+  const isnotLargeatAll = useMediaQuery("(min-width: 650px)")
+  const isnotLarge = useMediaQuery("(min-width: 530px)")
   return (
     <Layout>
       <SEO title="Sigurna Kućica" />
@@ -56,6 +56,7 @@ const IndexPage = ({ data }) => {
         showBullets={false}
         showFullscreenButton={false}
         showThumbnails={false}
+        style={{}}
       />
 
       <Sigurna />
