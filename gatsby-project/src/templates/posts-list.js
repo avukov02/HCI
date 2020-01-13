@@ -57,6 +57,7 @@ const BlogList = ({
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts1 = hasSearchResults ? filteredData : posts
   const isLarge = useMediaQuery("(min-width: 480px)")
+  const isnotLarge = useMediaQuery("(min-width: 375px)")
 
   return (
     <Layout>
@@ -82,6 +83,7 @@ const BlogList = ({
             marginBottom: "5px",
             py: 2,
             paddingLeft: 4,
+            marginRight: "20px",
             overflow: "hidden",
             borderWidth: 0,
             color: "text",
@@ -90,6 +92,7 @@ const BlogList = ({
             "&:focus": {
               outline: "none",
               backgroundColor: "#9AD1C4",
+              maxWidth: isnotLarge ? "200px" : "158px",
             },
           }}
         />
@@ -110,8 +113,8 @@ const BlogList = ({
           gridTemplateRows: "auto auto auto",
           gridColumnGap: "10px",
           justifyItems: "center",
-          paddingLeft: "100px",
-          paddingRight: "100px",
+          paddingLeft: isLarge ? "100px" : "60px",
+          paddingRight: isLarge ? "100px" : "60px",
         }}
       >
         <BlogExcerpt posts={posts1} />

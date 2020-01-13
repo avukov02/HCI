@@ -29,7 +29,13 @@ export default ({ pageContext, data }) => {
           <MDXRenderer>{pas.body}</MDXRenderer>
         </div>
         <div>
-          <Img fixed={pas.frontmatter.image.childImageSharp.fixed} />
+          <Img
+            style={{
+              maxWidth: "316px",
+              maxHeight: "344px",
+            }}
+            fluid={pas.frontmatter.image.childImageSharp.fluid}
+          />
         </div>
       </div>
 
@@ -65,8 +71,8 @@ export const query = graphql`
         name
         image {
           childImageSharp {
-            fixed(width: 316, height: 344) {
-              ...GatsbyImageSharpFixed
+            fluid {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

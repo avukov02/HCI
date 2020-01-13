@@ -14,7 +14,7 @@ export default ({ psi }) => {
           display: "grid",
           gridTemplateRows: "auto auto auto",
           gridColumnGap: "10px",
-          gridRowGap: "10px",
+          gridRowGap: "1px",
           justifyItems: "center",
           padding: "10px",
           textAlign: "center",
@@ -24,11 +24,15 @@ export default ({ psi }) => {
       >
         <Img sx={{ mb: 1 }} fixed={image.childImageSharp.fixed} />
         <p sx={{ ml: 0, mr: 0, mb: 0, color: "#9AD1C4" }}>
-          <Styled.a as={Link} to={`/udomi/${slug}`}>
+          <Styled.a
+            as={Link}
+            to={`/udomi/${slug}`}
+            style={{ fontSize: "large" }}
+          >
             {name}
           </Styled.a>
         </p>
-        <p sx={{ mb: 1, maxWidth: "222px" }}>{excerpt}</p>
+        <p sx={{ color: "#808080", mb: 1, maxWidth: "222px" }}>{excerpt}</p>
         <Styled.a as={Link} to={`/udomi/${slug}`}>
           <p sx={{ color: "#9AD1C4" }}>Pročitaj više...</p>
         </Styled.a>

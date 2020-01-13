@@ -19,7 +19,7 @@ const Help = () => {
         flexDirection: "column",
         justifyContent: "space-around",
         alignItems: "center",
-        margin: isLarge ? "0px 10px 20px 10px" : "0px 0px 20px 00px",
+        margin: isLarge ? "0px 10px 20px 10px" : "0px 0px 20px 0px",
         padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
       }}
     >
@@ -67,7 +67,7 @@ const Help = () => {
         style={{
           marginTop: isLarge ? "30px" : "-10px",
           marginBottom: "30px",
-          position: "relative",
+
           minWidth: "250px",
           minHeigh: "100px",
         }}
@@ -173,30 +173,58 @@ const Help = () => {
         >
           Doniraj
         </h2>
-        <div
-          style={{
-            fontSize: isLarge ? "20px" : "18px ",
-            color: "#A8A7AF",
-            margin: isLarge
-              ? "0 150px 0px 150px"
-              : isnotLargeatAll
-              ? "0 50px 70px 50px"
-              : "0 50px 70px 50px",
-            letterSpacing: "1px",
-            lineHeight: "1.8",
-          }}
-        >
-          <p>
+        <div>
+          <p
+            style={{
+              fontSize: isLarge ? "20px" : "18px ",
+              color: "#A8A7AF",
+              margin: isLarge
+                ? "0 150px 10px 150px"
+                : isnotLargeatAll
+                ? "0 50px 20px 50px"
+                : "0 50px 20px 50px",
+              letterSpacing: "1px",
+              lineHeight: "1.8",
+              textAlign: "left",
+            }}
+          >
             Donacije su ono što nam omogućava adekvatnu brigu o našim
             štićenicima. Donirati možete novac, hranu, dekice, dotrajalu
             posteljinu, sredstva protiv nametnika i sve ostalo što bi nam moglo
             koristiti u radu. Ako se odlučite donirati novac, to možete učiniti
             na naše račun: Račun za donacije:
           </p>
-          <p style={{ textAlign: "center" }}>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: isLarge ? "20px" : "18px ",
+              color: "#A8A7AF",
+              overflowWrap: "break-word",
+              margin: isLarge
+                ? "0 150px 10px 150px"
+                : isnotLargeatAll
+                ? "0 50px 10px 50px"
+                : "0 50px 10px 50px",
+            }}
+          >
             HR6723600001102587785, ZABAHR2X{" "}
           </p>
-          <p style={{ textAlign: "center" }}> paypal:sigurnakucica@gmail.com</p>
+          <p
+            style={{
+              textAlign: "center",
+              fontSize: isLarge ? "20px" : "18px ",
+              color: "#A8A7AF",
+              overflowWrap: "break-word",
+              margin: isLarge
+                ? "0 150px 0px 150px"
+                : isnotLargeatAll
+                ? "0 50px 0px 50px"
+                : "0 50px 0px 50px",
+            }}
+          >
+            {" "}
+            paypal:sigurnakucica@gmail.com
+          </p>
         </div>
       </div>
     </div>
