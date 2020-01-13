@@ -41,6 +41,7 @@ const Udomljavanje = ({
           paddingLeft: isLarge ? "70px" : isnotLargeatAll ? "70px" : "20px",
           paddingRight: isLarge ? "70px" : isnotLargeatAll ? "70px" : "20px",
           marginBottom: "10px",
+          marginTop: isLarge ? "50px" : "30px",
         }}
       >
         <UdomiExcerpt psi={psi} />

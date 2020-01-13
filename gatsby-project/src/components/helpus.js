@@ -68,8 +68,8 @@ const Help = () => {
           marginTop: isLarge ? "30px" : "-10px",
           marginBottom: "30px",
 
-          minWidth: "250px",
-          minHeigh: "100px",
+          minWidth: "200px",
+          minHeigh: "70px",
         }}
       >
         <StaticQuery
@@ -88,145 +88,119 @@ const Help = () => {
         />
       </div>
 
-      <div
+      <h2
         style={{
-          backgroundColor: "white",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-around",
-          alignItems: "center",
-          margin: "0px -8px 20px -8px",
-          padding: isLarge ? "30px 0 30px 0" : "0",
+          color: "#9AD1C4",
+          fontSize: isLarge ? "35px" : "33px ",
+          marginTop: isLarge ? "30px" : "20px ",
+          textAlign: "center",
         }}
       >
-        <h2
-          style={{
-            color: "#9AD1C4",
-            fontSize: isLarge ? "35px" : "33px ",
-            marginTop: "0px",
-            textAlign: "center",
-          }}
-        >
-          Volontiraj
-        </h2>
-        <p
-          style={{
-            fontFamily: "Georgia, serif",
-            fontSize: "1.5em",
-            fontStyle: "italic",
-            lineHeight: " 1.4 ",
-            color: "#C6DAD5",
-            marginLeft: "50px",
-            marginRight: "50px",
-            textAlign: "left",
-          }}
-        >
-          Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što
-          su neprocjenjivi.
-        </p>
-        <p
-          style={{
-            fontSize: isLarge ? "20px" : "18px ",
-            color: "#A8A7AF",
-            margin: isLarge
-              ? "0 150px 0px 150px"
-              : isnotLargeatAll
-              ? "0 50px 70px 50px"
-              : "0 50px 70px 50px",
-            letterSpacing: "1px",
-            lineHeight: "1.8",
-          }}
-        >
-          Biti volonter u Sigurnoj Kućici znači raditi nešto besplatno za
-          štićenike udruge i nju samu. Volontiranje se u udruzi odvija u skladu
-          s postojećim Zakonom o volonterstvu. U Sigurnoj kućici se može
-          volontirati na razne načine – možete doći u azil i družiti se s našim
-          psima, čistiti njihove boxeve, hraniti ih ili pak pomagati u izgradnji
-          skloništa. Van azila možete pomoći Šapici s organizacijom raznih
-          promotivnih aktivnosti ili sami, primjerice, organizirati potrepštine
-          za naše pse. Također možete sudjelovati u radu Udruge iz pozadine –
-          puno je zadataka koji se svakodnevno obavljaju kao i onih povremenih,
-          a sve se dogovara u skladu s Vašim mogućnostima i željama. Ukoliko
-          želite postati volonter Udruge Šapica, molimo Vas da nam se javite na
-          našu mail adresu: sigurnakucica@gmail.com
-        </p>
-      </div>
+        Volontiraj
+      </h2>
+      <p
+        style={{
+          fontFamily: "Georgia, serif",
+          fontSize: "1.5em",
+          fontStyle: "italic",
+          lineHeight: " 1.4 ",
+          color: "#C6DAD5",
+          marginLeft: "50px",
+          marginRight: "50px",
+          textAlign: "left",
+        }}
+      >
+        Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što su
+        neprocjenjivi.
+      </p>
+      <p
+        style={{
+          fontSize: isLarge ? "20px" : "18px ",
+          color: "#A8A7AF",
+          margin: isLarge
+            ? "0 150px 0px 150px"
+            : isnotLargeatAll
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 50px",
+          letterSpacing: "1px",
+          lineHeight: "1.8",
+        }}
+      >
+        Biti volonter u Sigurnoj Kućici znači raditi nešto besplatno za
+        štićenike udruge i nju samu. Volontiranje se u udruzi odvija u skladu s
+        postojećim Zakonom o volonterstvu. U Sigurnoj kućici se može volontirati
+        na razne načine – možete doći u azil i družiti se s našim psima, čistiti
+        njihove boxeve, hraniti ih ili pak pomagati u izgradnji skloništa. Van
+        azila možete pomoći Šapici s organizacijom raznih promotivnih aktivnosti
+        ili sami, primjerice, organizirati potrepštine za naše pse. Također
+        možete sudjelovati u radu Udruge iz pozadine – puno je zadataka koji se
+        svakodnevno obavljaju kao i onih povremenih, a sve se dogovara u skladu
+        s Vašim mogućnostima i željama. Ukoliko želite postati volonter Udruge
+        Šapica, molimo Vas da nam se javite na našu mail adresu:
+        sigurnakucica@gmail.com
+      </p>
 
-      <div
+      <h2
         style={{
-          backgroundColor: "white",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-around",
-          alignItems: "center",
-          margin: "0px -8px 20px -8px",
-          padding: isLarge ? "30px 0 30px 0" : "0",
+          color: "#9AD1C4",
+          fontSize: isLarge ? "35px" : "33px ",
+          marginTop: isLarge ? "30px" : "0px ",
+          textAlign: "center",
         }}
       >
-        <h2
-          style={{
-            color: "#9AD1C4",
-            fontSize: isLarge ? "35px" : "33px ",
-            marginTop: "0px",
-            textAlign: "center",
-          }}
-        >
-          Doniraj
-        </h2>
-        <div>
-          <p
-            style={{
-              fontSize: isLarge ? "20px" : "18px ",
-              color: "#A8A7AF",
-              margin: isLarge
-                ? "0 150px 10px 150px"
-                : isnotLargeatAll
-                ? "0 50px 20px 50px"
-                : "0 50px 20px 50px",
-              letterSpacing: "1px",
-              lineHeight: "1.8",
-              textAlign: "left",
-            }}
-          >
-            Donacije su ono što nam omogućava adekvatnu brigu o našim
-            štićenicima. Donirati možete novac, hranu, dekice, dotrajalu
-            posteljinu, sredstva protiv nametnika i sve ostalo što bi nam moglo
-            koristiti u radu. Ako se odlučite donirati novac, to možete učiniti
-            na naše račun: Račun za donacije:
-          </p>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: isLarge ? "20px" : "18px ",
-              color: "#A8A7AF",
-              overflowWrap: "break-word",
-              margin: isLarge
-                ? "0 150px 10px 150px"
-                : isnotLargeatAll
-                ? "0 50px 10px 50px"
-                : "0 50px 10px 50px",
-            }}
-          >
-            HR6723600001102587785, ZABAHR2X{" "}
-          </p>
-          <p
-            style={{
-              textAlign: "center",
-              fontSize: isLarge ? "20px" : "18px ",
-              color: "#A8A7AF",
-              overflowWrap: "break-word",
-              margin: isLarge
-                ? "0 150px 0px 150px"
-                : isnotLargeatAll
-                ? "0 50px 0px 50px"
-                : "0 50px 0px 50px",
-            }}
-          >
-            {" "}
-            paypal:sigurnakucica@gmail.com
-          </p>
-        </div>
-      </div>
+        Doniraj
+      </h2>
+      <p
+        style={{
+          fontSize: isLarge ? "20px" : "18px ",
+          color: "#A8A7AF",
+          margin: isLarge
+            ? "0 150px 10px 150px"
+            : isnotLargeatAll
+            ? "0 50px 20px 50px"
+            : "0 50px 20px 50px",
+          letterSpacing: "1px",
+          lineHeight: "1.8",
+          textAlign: "left",
+        }}
+      >
+        Donacije su ono što nam omogućava adekvatnu brigu o našim štićenicima.
+        Donirati možete novac, hranu, dekice, dotrajalu posteljinu, sredstva
+        protiv nametnika i sve ostalo što bi nam moglo koristiti u radu. Ako se
+        odlučite donirati novac, to možete učiniti na naše račun: Račun za
+        donacije:
+      </p>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: isLarge ? "20px" : "18px ",
+          color: "#A8A7AF",
+          overflowWrap: "break-word",
+          margin: isLarge
+            ? "0 150px 10px 150px"
+            : isnotLargeatAll
+            ? "0 50px 10px 50px"
+            : "0 50px 10px 50px",
+        }}
+      >
+        HR6723600001102587785, ZABAHR2X{" "}
+      </p>
+      <p
+        style={{
+          textAlign: "center",
+          fontSize: isLarge ? "20px" : "18px ",
+          color: "#A8A7AF",
+          overflowWrap: "break-word",
+          margin: isLarge
+            ? "0 150px 0px 150px"
+            : isnotLargeatAll
+            ? "0 50px 0px 50px"
+            : "0 50px 0px 50px",
+        }}
+      >
+        {" "}
+        paypal:sigurnakucica@gmail.com
+      </p>
     </div>
   )
 }
