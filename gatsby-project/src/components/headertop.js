@@ -1,10 +1,21 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
+import IdentityModal,{useIdentityContext} from 'react-netlify-identity-widget'
+import React from "react"
+import "@reach/tabs/styles.css"
+import '@reach/dialog'
+import '@reach/visually-hidden'
 
 const Headertop = () => {
   const isLarge = useMediaQuery("(min-width: 700px)")
   const Hide = useMediaQuery("(min-width: 440px)")
+  const [dialog, setDialog] = React.useState(false);
+  const identity = useIdentityContext()
+  const name =
+    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || 'NoName'
+  const isLoggedIn = identity && identity.isLoggedIn
+
   return (
     <div style={isLarge ? style1 : style2}>
       <div
@@ -19,11 +30,12 @@ const Headertop = () => {
         <p style={{ color: "#78758E" }}>sigurnakucica@gmail.com</p>
       </div>
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <button
+      <button
+        	onClick={()=>setDialog(true)}
           sx={{
             display: "inline-block",
             margin: Hide ? "6px 2px" : "12px 2px",
-            padding: "5px 15px",
+            padding: "5px 20px",
             fontSize: "15px",
             cursor: "pointer",
             textAlign: "center",
@@ -42,34 +54,16 @@ const Headertop = () => {
             },
           }}
         >
-          Prijava
-        </button>
-        <button
-          sx={{
-            display: "inline-block",
-            margin: Hide ? "6px 2px" : "12px 2px",
-            padding: "5px 15px",
-            fontSize: "15px",
-            cursor: "pointer",
-            textAlign: "center",
-            textDecoration: "none",
-            outline: "none",
-            color: "#fff",
-            backgroundColor: "#9AD1C4",
-            border: "none",
-            borderRadius: "15px",
-            "&:hover": {
-              backgroundColor: "#7DD0BC",
-              opacity: 1,
-            },
-            "&:active": {
-              transform: "translateY(1px)",
-            },
-          }}
-        >
-          Registracija
+          {isLoggedIn ? `Odjavi se` : 'Prijava'}
         </button>
       </div>
+      <IdentityModal
+        showDialog={dialog}
+        onCloseDialog={() => setDialog(false)}
+        onLogin={(user) => console.log('hello ', user.user_metadata)}
+        onSignup={(user) => console.log('welcome ', user.user_metadata)}
+        onLogout={() => console.log('bye ', name)}
+      />
     </div>
   )
 }

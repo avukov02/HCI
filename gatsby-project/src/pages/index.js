@@ -13,6 +13,8 @@ import Sigurna from "../components/sigurna"
 import "../components/image-gallery.css"
 import BlogExcerpt from "../components/blog-excerpt"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
+import {IdentityContextProvider} from "react-netlify-identity-widget"
+import "../components/netlify-identity.css"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
     text:"Naslovna",
@@ -42,8 +44,10 @@ const IndexPage = ({ data }) => {
   const isLarge = useMediaQuery("(min-width: 900px)")
   const isnotLargeatAll = useMediaQuery("(min-width: 650px)")
   const isnotLarge = useMediaQuery("(min-width: 530px)")
+  const identity = 'https://modest-goodall-3c77be.netlify.com'
   return (
     <Layout>
+      <IdentityContextProvider url={identity}>
       <SEO title="Sigurna Kućica" />
       <ImageGallery
         items={[
@@ -97,6 +101,7 @@ const IndexPage = ({ data }) => {
           <BlogExcerpt posts={posts} />
         </div>
       </div>
+      </IdentityContextProvider>
     </Layout>
   )
 }
