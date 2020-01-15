@@ -11,6 +11,7 @@ function renderImage({ file }) {
 const About = () => {
   const isLarge = useMediaQuery("(min-width: 900px)")
   const isnotLargeatAll = useMediaQuery("(max-width: 900px,min-width:600px)")
+  const isMobile = useMediaQuery("(min-width:400px)")
   return (
     <div
       style={{
@@ -36,17 +37,33 @@ const About = () => {
           lineHeight: "1.8",
         }}
       >
-        <p style={{ textAlign: "center" }}>
+        <h2
+          style={{
+            color: "#9AD1C4",
+            fontSize: isLarge ? "35px" : "33px ",
+            marginTop: "0px",
+            textAlign: "center",
+          }}
+        >
+          Sigurna Kućica
+        </h2>
+        <p style={{ textAlign: "center", marginTop: "-30px" }}>
           {" "}
           Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
           Velike Gorice i pomažemo udomljavati pse iz skloništa. S obzirom da
           preuzimamo i pse na skrb do udomljenja i najmanja donacija omogućuje
           nam rad i svakodnevnu brigu o njima. Budite uz nas.
         </p>
-        <p style={{ textAlign: "center" }}>
+        <p
+          style={{ textAlign: "center", color: "#78758E", marginTop: "-10px" }}
+        >
           Račun za donacije: HR6723600001102587785, ZABAHR2X
         </p>
-        <p style={{ textAlign: "center" }}>paypal: sigurnakucica@gmail.com</p>
+        <p
+          style={{ textAlign: "center", color: "#78758E", marginTop: "-20px" }}
+        >
+          paypal: sigurnakucica@gmail.com
+        </p>
       </div>
       <div
         style={{
@@ -80,7 +97,9 @@ const About = () => {
             ? "0 150px 0px 150px"
             : isnotLargeatAll
             ? "0 50px 70px 50px"
-            : "0 50px 70px 50px",
+            : isMobile
+            ? "0 50px 70px 50px"
+            : "0 50px 70px 20px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}

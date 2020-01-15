@@ -66,7 +66,7 @@ const Help = () => {
       <div
         style={{
           marginTop: isLarge ? "30px" : "-10px",
-          marginBottom: "30px",
+          marginBottom: "10px",
 
           minWidth: "200px",
           minHeigh: "70px",
@@ -108,6 +108,7 @@ const Help = () => {
           marginLeft: "50px",
           marginRight: "50px",
           textAlign: "left",
+          marginTop: "-10px",
         }}
       >
         Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što su
@@ -118,7 +119,7 @@ const Help = () => {
           fontSize: isLarge ? "20px" : "18px ",
           color: "#A8A7AF",
           margin: isLarge
-            ? "0 150px 0px 150px"
+            ? "-10px 150px 0px 150px"
             : isnotLargeatAll
             ? "0 50px 70px 50px"
             : "0 50px 70px 50px",
@@ -155,7 +156,7 @@ const Help = () => {
           fontSize: isLarge ? "20px" : "18px ",
           color: "#A8A7AF",
           margin: isLarge
-            ? "0 150px 10px 150px"
+            ? "-10px 150px 10px 150px"
             : isnotLargeatAll
             ? "0 50px 20px 50px"
             : "0 50px 20px 50px",
@@ -167,8 +168,7 @@ const Help = () => {
         Donacije su ono što nam omogućava adekvatnu brigu o našim štićenicima.
         Donirati možete novac, hranu, dekice, dotrajalu posteljinu, sredstva
         protiv nametnika i sve ostalo što bi nam moglo koristiti u radu. Ako se
-        odlučite donirati novac, to možete učiniti na naše račun: Račun za
-        donacije:
+        odlučite donirati novac, to možete učiniti na naše račun:
       </p>
       <p
         style={{
@@ -181,9 +181,10 @@ const Help = () => {
             : isnotLargeatAll
             ? "0 50px 10px 50px"
             : "0 50px 10px 50px",
+          color: "#78758E",
         }}
       >
-        HR6723600001102587785, ZABAHR2X{" "}
+        Račun za donacije: HR6723600001102587785, ZABAHR2X{" "}
       </p>
       <p
         style={{
@@ -196,10 +197,11 @@ const Help = () => {
             : isnotLargeatAll
             ? "0 50px 0px 50px"
             : "0 50px 0px 50px",
+          color: "#78758E",
         }}
       >
         {" "}
-        paypal:sigurnakucica@gmail.com
+        Paypal: sigurnakucica@gmail.com
       </p>
     </div>
   )
