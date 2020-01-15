@@ -33,6 +33,8 @@ bower_components
 build/Release
 
 # Dependency directories
+!node_modules/
+
 node_modules/*
 !/node_modules/react-netlify-identity-widget/
 jspm_packages/
