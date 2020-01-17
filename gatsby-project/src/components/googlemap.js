@@ -18,8 +18,8 @@ const GoogleMap = () => {
     <div
       style={{
         display: "flex",
-        height: isLarge ? "220px" : "200px",
-        width: isLarge ? "320px" : "250px",
+        height: isLarge ? "280px" : "200px",
+        width: isLarge ? "420px" : "250px",
       }}
     >
       <GoogleMapReact
