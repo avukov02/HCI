@@ -43,7 +43,6 @@ const IndexPage = ({ data }) => {
   const posts = data.second.posts
   const isLarge = useMediaQuery("(min-width: 900px)")
   const isnotLargeatAll = useMediaQuery("(min-width: 650px)")
-  const isnotLarge = useMediaQuery("(min-width: 530px)")
   const identity = "https://modest-goodall-3c77be.netlify.com"
   return (
     <Layout>
@@ -67,24 +66,10 @@ const IndexPage = ({ data }) => {
 
         <div
           style={{
-<<<<<<< Updated upstream
-            display: "grid",
-            gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
-            gridColumnGap: "100px",
-            justifyItems: "center",
-            paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "10px",
-            paddingRight: isLarge
-              ? "100px"
-              : isnotLargeatAll
-              ? "100px"
-              : "60px",
-            textAlign: isnotLarge ? "left" : "center",
-=======
             display: "flex",
             flexDirection: "column",
 
             justifyContent: "center",
->>>>>>> Stashed changes
           }}
         >
           <p
