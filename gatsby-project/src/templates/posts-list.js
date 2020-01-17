@@ -65,8 +65,8 @@ const BlogList = ({
       <PozadinskaSlika naziv={"Blog"} />
       <div
         style={{
-          marginLeft: isLarge ? "100px" : "50px",
-          marginRight: isLarge ? "100px" : "50px",
+          marginLeft: isLarge ? "100px" : "30px",
+          marginRight: isLarge ? "100px" : "30px",
           position: "relative",
           paddingLeft: "10px",
           borderTop: "1px solid #78758E",
@@ -113,8 +113,8 @@ const BlogList = ({
           gridTemplateRows: "auto auto auto",
           gridColumnGap: "10px",
           justifyItems: "center",
-          paddingLeft: isLarge ? "100px" : "60px",
-          paddingRight: isLarge ? "100px" : "60px",
+          paddingLeft: isLarge ? "100px" : "30px",
+          paddingRight: isLarge ? "100px" : "30px",
         }}
       >
         <BlogExcerpt posts={posts1} />

@@ -19,49 +19,44 @@ const About = () => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
-        alignItems: "center",
-        margin: "0px -8px 20px -8px",
-        padding: "30px 0 30px 0",
+        alignItems: "flex-start",
+        margin: isLarge
+          ? "0 150px 30px 150px"
+          : isnotLargeatAll
+          ? "0 50px 70px 50px"
+          : isMobile
+          ? "0 50px 70px 50px"
+          : "0 30px 70px 30px",
       }}
     >
       <div
         style={{
           fontSize: isLarge ? "20px" : "18px ",
           color: "#A8A7AF",
-          margin: isLarge
-            ? "0 150px 0px 150px"
-            : isnotLargeatAll
-            ? "0 50px 70px 50px"
-            : "0 50px 70px 50px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}
       >
         <h2
           style={{
-            color: "#9AD1C4",
-            fontSize: isLarge ? "35px" : "33px ",
-            marginTop: "0px",
-            textAlign: "center",
+            color: "#7DD0BC",
+            fontSize: isLarge ? "35px" : "30px ",
+            textAlign: "left",
           }}
         >
           Sigurna Kućica
         </h2>
-        <p style={{ textAlign: "center", marginTop: "-30px" }}>
+        <p style={{ textAlign: "left", color: "#898893", marginTop: "-20px" }}>
           {" "}
           Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja
           Velike Gorice i pomažemo udomljavati pse iz skloništa. S obzirom da
           preuzimamo i pse na skrb do udomljenja i najmanja donacija omogućuje
-          nam rad i svakodnevnu brigu o njima. Budite uz nas.
+          nam rad i brigu o njima. Budite uz nas.
         </p>
-        <p
-          style={{ textAlign: "center", color: "#78758E", marginTop: "-10px" }}
-        >
+        <p style={{ textAlign: "left", color: "#78758E", marginTop: "-10px" }}>
           Račun za donacije: HR6723600001102587785, ZABAHR2X
         </p>
-        <p
-          style={{ textAlign: "center", color: "#78758E", marginTop: "-20px" }}
-        >
+        <p style={{ textAlign: "left", color: "#78758E", marginTop: "-20px" }}>
           paypal: sigurnakucica@gmail.com
         </p>
       </div>
@@ -72,6 +67,7 @@ const About = () => {
           position: "relative",
           minWidth: "250px",
           minHeigh: "100px",
+          alignSelf: "center",
         }}
       >
         <StaticQuery
@@ -92,16 +88,10 @@ const About = () => {
       <div
         style={{
           fontSize: isLarge ? "20px" : "18px ",
-          color: "#A8A7AF",
-          margin: isLarge
-            ? "0 150px 0px 150px"
-            : isnotLargeatAll
-            ? "0 50px 70px 50px"
-            : isMobile
-            ? "0 50px 70px 50px"
-            : "0 50px 70px 20px",
+          color: "#898893",
           letterSpacing: "1px",
           lineHeight: "1.8",
+          marginLeft: "-40px",
         }}
       >
         <ul style={{ textAlign: "left", listStylePosition: "inside" }}>
