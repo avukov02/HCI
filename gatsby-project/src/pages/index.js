@@ -13,7 +13,7 @@ import Sigurna from "../components/sigurna"
 import "../components/image-gallery.css"
 import BlogExcerpt from "../components/blog-excerpt"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
-import {IdentityContextProvider} from "react-netlify-identity-widget"
+import { IdentityContextProvider } from "react-netlify-identity-widget"
 import "../components/netlify-identity.css"
 /*
 const menuItems=[ //niz u kojem su svi linkovi
@@ -44,47 +44,30 @@ const IndexPage = ({ data }) => {
   const isLarge = useMediaQuery("(min-width: 900px)")
   const isnotLargeatAll = useMediaQuery("(min-width: 650px)")
   const isnotLarge = useMediaQuery("(min-width: 530px)")
-  const identity = 'https://modest-goodall-3c77be.netlify.com'
+  const identity = "https://modest-goodall-3c77be.netlify.com"
   return (
     <Layout>
       <IdentityContextProvider url={identity}>
-      <SEO title="Sigurna Kućica" />
-      <ImageGallery
-        items={[
-          data.first.edges[0].node.childImageSharp.fluid,
-          data.first.edges[1].node.childImageSharp.fluid,
-          data.first.edges[2].node.childImageSharp.fluid,
-        ]}
-        autoPlay={true}
-        showPlayButton={false}
-        showBullets={false}
-        showFullscreenButton={false}
-        showThumbnails={false}
-        style={{}}
-      />
+        <SEO title="Sigurna Kućica" />
+        <ImageGallery
+          items={[
+            data.first.edges[0].node.childImageSharp.fluid,
+            data.first.edges[1].node.childImageSharp.fluid,
+            data.first.edges[2].node.childImageSharp.fluid,
+          ]}
+          autoPlay={true}
+          showPlayButton={false}
+          showBullets={false}
+          showFullscreenButton={false}
+          showThumbnails={false}
+          style={{}}
+        />
 
-      <Sigurna />
+        <Sigurna />
 
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-
-          justifyContent: "center",
-        }}
-      >
-        <p
-          style={{
-            textAlign: "center",
-            color: "#78758E",
-            fontSize: "30px",
-            marginTop: isLarge ? "10px" : "-20px",
-          }}
-        >
-          Najnovije s bloga
-        </p>
         <div
           style={{
+<<<<<<< Updated upstream
             display: "grid",
             gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
             gridColumnGap: "100px",
@@ -96,11 +79,46 @@ const IndexPage = ({ data }) => {
               ? "100px"
               : "60px",
             textAlign: isnotLarge ? "left" : "center",
+=======
+            display: "flex",
+            flexDirection: "column",
+
+            justifyContent: "center",
+>>>>>>> Stashed changes
           }}
         >
-          <BlogExcerpt posts={posts} />
+          <p
+            style={{
+              textAlign: "center",
+              color: "#78758E",
+              fontSize: "30px",
+              marginTop: isLarge ? "10px" : "-20px",
+            }}
+          >
+            Najnovije s bloga
+          </p>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
+              gridColumnGap: "100px",
+              justifyItems: "center",
+              paddingLeft: isLarge
+                ? "100px"
+                : isnotLargeatAll
+                ? "100px"
+                : "30px",
+              paddingRight: isLarge
+                ? "100px"
+                : isnotLargeatAll
+                ? "100px"
+                : "30px",
+              textAlign: "left",
+            }}
+          >
+            <BlogExcerpt posts={posts} />
+          </div>
         </div>
-      </div>
       </IdentityContextProvider>
     </Layout>
   )

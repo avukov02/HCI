@@ -23,7 +23,7 @@ const Footer = () => {
           display: "flex",
           justifyContent: "center",
           marginTop: "20px",
-          color: "#76DFC5",
+          color: "#406b62",
           textAlign: "center",
         }}
       >

@@ -34,8 +34,6 @@ const SideMenu2 = ({ menuItems }) => {
             textDecoration: "none",
             whiteSpace: "nowrap",
             letterSpacing: "wide",
-            borderLeft: theme =>
-              `${theme.sizes.navLinkBorder} solid transparent`,
             transition: "all 0.25s linear",
             "&:hover": {
               color: "primaryHover",

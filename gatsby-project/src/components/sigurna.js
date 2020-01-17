@@ -28,7 +28,7 @@ const Sigurna = () => {
       </p>
       <h2
         style={{
-          color: "#9AD1C4",
+          color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "33px ",
           marginTop: "0px",
           textAlign: "center",
