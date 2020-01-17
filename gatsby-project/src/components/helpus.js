@@ -26,7 +26,7 @@ const Help = () => {
       <h2
         style={{
           color: "#9AD1C4",
-          fontSize: isLarge ? "35px" : "33px ",
+          fontSize: isLarge ? "35px" : "28px ",
           marginTop: "0px",
           textAlign: "center",
         }}
@@ -91,7 +91,7 @@ const Help = () => {
       <h2
         style={{
           color: "#9AD1C4",
-          fontSize: isLarge ? "35px" : "33px ",
+          fontSize: isLarge ? "35px" : "28px ",
           marginTop: isLarge ? "30px" : "20px ",
           textAlign: "center",
         }}
@@ -144,7 +144,7 @@ const Help = () => {
       <h2
         style={{
           color: "#9AD1C4",
-          fontSize: isLarge ? "35px" : "33px ",
+          fontSize: isLarge ? "35px" : "28px ",
           marginTop: isLarge ? "30px" : "0px ",
           textAlign: "center",
         }}
@@ -174,7 +174,7 @@ const Help = () => {
         style={{
           textAlign: "center",
           fontSize: isLarge ? "20px" : "18px ",
-          color: "#A8A7AF",
+
           overflowWrap: "break-word",
           margin: isLarge
             ? "0 150px 10px 150px"
@@ -190,7 +190,7 @@ const Help = () => {
         style={{
           textAlign: "center",
           fontSize: isLarge ? "20px" : "18px ",
-          color: "#A8A7AF",
+
           overflowWrap: "break-word",
           margin: isLarge
             ? "0 150px 0px 150px"

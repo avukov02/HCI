@@ -1,19 +1,25 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 import useMediaQuery from "@material-ui/core/useMediaQuery"
-import IdentityModal,{useIdentityContext} from 'react-netlify-identity-widget'
+import IdentityModal, {
+  useIdentityContext,
+} from "react-netlify-identity-widget"
 import React from "react"
 import "@reach/tabs/styles.css"
-import '@reach/dialog'
-import '@reach/visually-hidden'
+import "@reach/dialog"
+import "@reach/visually-hidden"
 
 const Headertop = () => {
   const isLarge = useMediaQuery("(min-width: 700px)")
   const Hide = useMediaQuery("(min-width: 440px)")
-  const [dialog, setDialog] = React.useState(false);
+  const [dialog, setDialog] = React.useState(false)
   const identity = useIdentityContext()
   const name =
-    (identity && identity.user && identity.user.user_metadata && identity.user.user_metadata.name) || 'NoName'
+    (identity &&
+      identity.user &&
+      identity.user.user_metadata &&
+      identity.user.user_metadata.name) ||
+    "NoName"
   const isLoggedIn = identity && identity.isLoggedIn
 
   return (
@@ -24,14 +30,14 @@ const Headertop = () => {
           flexDirection: "row",
         }}
       >
-        <p style={{ marginRight: "10px", color: "#78758E" }}>
+        <p style={{ marginRight: "10px", color: "#666378" }}>
           Kontaktirajte nas na: 091234568
         </p>
-        <p style={{ color: "#78758E" }}>sigurnakucica@gmail.com</p>
+        <p style={{ color: "#666378" }}>sigurnakucica@gmail.com</p>
       </div>
       <div style={{ display: "flex", flexDirection: "row" }}>
-      <button
-        	onClick={()=>setDialog(true)}
+        <button
+          onClick={() => setDialog(true)}
           sx={{
             display: "inline-block",
             margin: Hide ? "6px 2px" : "12px 2px",
@@ -54,15 +60,15 @@ const Headertop = () => {
             },
           }}
         >
-          {isLoggedIn ? `Odjavi se` : 'Prijava'}
+          {isLoggedIn ? `Odjavi se` : "Prijava"}
         </button>
       </div>
       <IdentityModal
         showDialog={dialog}
         onCloseDialog={() => setDialog(false)}
-        onLogin={(user) => console.log('hello ', user.user_metadata)}
-        onSignup={(user) => console.log('welcome ', user.user_metadata)}
-        onLogout={() => console.log('bye ', name)}
+        onLogin={user => console.log("hello ", user.user_metadata)}
+        onSignup={user => console.log("welcome ", user.user_metadata)}
+        onLogout={() => console.log("bye ", name)}
       />
     </div>
   )

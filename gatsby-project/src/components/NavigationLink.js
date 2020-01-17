@@ -12,7 +12,7 @@ const NavigationLink = ({ children, ...prop }) => {
         display: "inline-block",
         px: 3,
         ml: 4,
-        color: "#78758E",
+        color: "#666378",
         textDecoration: "none",
         whiteSpace: "nowrap",
         letterSpacing: "wide",
@@ -27,7 +27,7 @@ const NavigationLink = ({ children, ...prop }) => {
         },
       }}
       activeStyle={{
-        color: theme.colors.primaryHover,
+        color: "#666378",
         borderBottom: `${theme.sizes.navLinkBorder} solid #9AD1C4`,
       }}
     >
