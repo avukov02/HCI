@@ -89,7 +89,7 @@ const IndexPage = ({ data }) => {
             gridTemplateColumns: isLarge ? "auto auto auto" : "auto",
             gridColumnGap: "100px",
             justifyItems: "center",
-            paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "60px",
+            paddingLeft: isLarge ? "100px" : isnotLargeatAll ? "100px" : "10px",
             paddingRight: isLarge
               ? "100px"
               : isnotLargeatAll

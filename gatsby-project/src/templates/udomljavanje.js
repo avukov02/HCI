@@ -14,8 +14,8 @@ const Udomljavanje = ({
     allMdx: { psi },
   },
 }) => {
-  const isLarge = useMediaQuery("(min-width: 900px)")
-  const isnotLargeatAll = useMediaQuery("(min-width: 650px)")
+  const isLarge = useMediaQuery("(min-width: 1090px)")
+  const isnotLargeatAll = useMediaQuery("(min-width: 760px)")
   const { currentPage, numofPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numofPages
@@ -82,7 +82,7 @@ export const query = graphql`
             slug
             image {
               childImageSharp {
-                fixed(height: 258, width: 222) {
+                fixed(height: 300, width: 280) {
                   ...GatsbyImageSharpFixed
                 }
               }
