@@ -11,6 +11,7 @@ function renderImage({ file }) {
 const Help = () => {
   const isLarge = useMediaQuery("(min-width: 1000px)")
   const isnotLargeatAll = useMediaQuery("(max-width: 1000px,min-width:600px)")
+  const isMobile = useMediaQuery("(min-width:400px)")
   return (
     <div
       style={{
@@ -20,18 +21,20 @@ const Help = () => {
         justifyContent: "space-around",
         alignItems: "center",
         margin: isLarge
-          ? "0 150px 0px 150px"
+          ? "50px 150px 30px 150px"
           : isnotLargeatAll
-          ? "0 50px 50px 50px"
-          : "0 50px 50px 50px",
-        padding: isLarge ? "30px 0 30px 0" : "40px 0 10px 0",
+          ? "50px 50px 70px 50px"
+          : isMobile
+          ? "50px 40px 70px 40px"
+          : "50px 30px 70px 30px",
       }}
     >
       <h2
         style={{
-          color: "#9AD1C4",
+          color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "28px ",
           marginTop: "0px",
+          marginBottom: "0px",
           textAlign: "left",
         }}
       >
@@ -64,9 +67,9 @@ const Help = () => {
       </p>
       <div
         style={{
-          marginTop: isLarge ? "30px" : "-10px",
-          marginBottom: "10px",
-
+          marginTop: isLarge ? "10px" : "0px",
+          marginBottom: "20px",
+          alignSelf: "center",
           minWidth: "200px",
           minHeigh: "70px",
         }}
@@ -89,9 +92,10 @@ const Help = () => {
 
       <h2
         style={{
-          color: "#9AD1C4",
+          color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "28px ",
-          marginTop: isLarge ? "30px" : "20px ",
+          marginTop: "0px",
+          marginBottom: "10px",
           textAlign: "center",
         }}
       >
@@ -104,10 +108,9 @@ const Help = () => {
           fontStyle: "italic",
           lineHeight: " 1.4 ",
           color: "#C6DAD5",
-          marginLeft: "50px",
-          marginRight: "50px",
           textAlign: "left",
-          marginTop: "-10px",
+          marginTop: "10px",
+          marginBottom: "0px",
         }}
       >
         Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što su
@@ -137,9 +140,10 @@ const Help = () => {
 
       <h2
         style={{
-          color: "#9AD1C4",
+          color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "28px ",
-          marginTop: isLarge ? "30px" : "0px ",
+          marginTop: isLarge ? "40px" : "20px",
+          marginBottom: "0px",
           textAlign: "center",
         }}
       >
@@ -163,14 +167,9 @@ const Help = () => {
         style={{
           textAlign: "center",
           fontSize: isLarge ? "20px" : "18px ",
-
           overflowWrap: "break-word",
-          margin: isLarge
-            ? "0 150px 10px 150px"
-            : isnotLargeatAll
-            ? "0 50px 10px 50px"
-            : "0 50px 10px 50px",
           color: "#78758E",
+          marginTop: "-10px",
         }}
       >
         Račun za donacije: HR6723600001102587785, ZABAHR2X{" "}
@@ -179,14 +178,9 @@ const Help = () => {
         style={{
           textAlign: "center",
           fontSize: isLarge ? "20px" : "18px ",
-
           overflowWrap: "break-word",
-          margin: isLarge
-            ? "0 150px 0px 150px"
-            : isnotLargeatAll
-            ? "0 50px 0px 50px"
-            : "0 50px 0px 50px",
           color: "#78758E",
+          marginTop: "-10px",
         }}
       >
         {" "}

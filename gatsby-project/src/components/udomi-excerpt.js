@@ -20,7 +20,6 @@ export default ({ psi }) => {
           textAlign: "center",
           border: "1px  solid #9AD1C4",
           marginBottom: "20px",
-          width:"300px",
         }}
       >
         <Img sx={{ mb: 1 }} fixed={image.childImageSharp.fixed} />

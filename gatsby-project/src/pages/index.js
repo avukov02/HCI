@@ -68,7 +68,6 @@ const IndexPage = ({ data }) => {
           style={{
             display: "flex",
             flexDirection: "column",
-
             justifyContent: "center",
           }}
         >
@@ -78,6 +77,7 @@ const IndexPage = ({ data }) => {
               color: "#78758E",
               fontSize: "30px",
               marginTop: isLarge ? "10px" : "-20px",
+              marginBottom: "10px",
             }}
           >
             Najnovije s bloga
@@ -91,14 +91,15 @@ const IndexPage = ({ data }) => {
               paddingLeft: isLarge
                 ? "100px"
                 : isnotLargeatAll
-                ? "100px"
+                ? "70px"
                 : "30px",
               paddingRight: isLarge
                 ? "100px"
                 : isnotLargeatAll
-                ? "100px"
+                ? "70px"
                 : "30px",
               textAlign: "left",
+              marginBottom: isLarge ? "0px" : "20px",
             }}
           >
             <BlogExcerpt posts={posts} />

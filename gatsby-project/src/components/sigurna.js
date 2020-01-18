@@ -44,8 +44,8 @@ const Sigurna = () => {
           margin: isLarge
             ? "-15px 150px 0px 150px"
             : isnotLargeatAll
-            ? "0 50px 70px 50px"
-            : "0 50px 70px 50px",
+            ? "0 40px 70px 40px"
+            : "0 30px 70px 30px",
           letterSpacing: "1px",
           lineHeight: "1.8",
         }}

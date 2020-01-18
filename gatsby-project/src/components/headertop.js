@@ -40,8 +40,8 @@ const Headertop = () => {
           onClick={() => setDialog(true)}
           sx={{
             display: "inline-block",
-            margin: Hide ? "6px 2px" : "12px 2px",
-            padding: "5px 20px",
+            margin: Hide ? "6px 2px" : "10px 2px",
+            padding: Hide ? "5px 20px" : "8px 20px",
             fontSize: "15px",
             cursor: "pointer",
             textAlign: "center",

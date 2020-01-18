@@ -56,7 +56,7 @@ const BlogList = ({
   const { filteredData, query } = state
   const hasSearchResults = filteredData && query !== emptyQuery
   const posts1 = hasSearchResults ? filteredData : posts
-  const isLarge = useMediaQuery("(min-width: 480px)")
+  const isLarge = useMediaQuery("(min-width: 730px)")
   const isnotLarge = useMediaQuery("(min-width: 375px)")
 
   return (

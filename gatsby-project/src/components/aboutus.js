@@ -21,12 +21,12 @@ const About = () => {
         justifyContent: "space-around",
         alignItems: "flex-start",
         margin: isLarge
-          ? "0 150px 30px 150px"
+          ? "60px 150px 30px 150px"
           : isnotLargeatAll
-          ? "0 50px 70px 50px"
+          ? "60px 50px 70px 50px"
           : isMobile
-          ? "0 50px 70px 50px"
-          : "0 30px 70px 30px",
+          ? "50px 40px 70px 40px"
+          : "50px 30px 70px 30px",
       }}
     >
       <div
@@ -37,15 +37,6 @@ const About = () => {
           lineHeight: "1.8",
         }}
       >
-        <h2
-          style={{
-            color: "#7DD0BC",
-            fontSize: isLarge ? "35px" : "30px ",
-            textAlign: "left",
-          }}
-        >
-          Sigurna Kućica
-        </h2>
         <p style={{ textAlign: "left", color: "#898893", marginTop: "-20px" }}>
           {" "}
           Naša udruga pomaže napuštenim i nezbrinutim životinjama s područja

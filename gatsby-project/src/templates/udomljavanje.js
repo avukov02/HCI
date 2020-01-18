@@ -82,7 +82,7 @@ export const query = graphql`
             slug
             image {
               childImageSharp {
-                fixed(height: 300, width: 280) {
+                fixed(height: 290, width: 269) {
                   ...GatsbyImageSharpFixed
                 }
               }
