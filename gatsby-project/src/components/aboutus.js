@@ -21,12 +21,12 @@ const About = () => {
         justifyContent: "space-around",
         alignItems: "flex-start",
         margin: isLarge
-          ? "60px 150px 30px 150px"
+          ? "70px 150px 30px 150px"
           : isnotLargeatAll
-          ? "60px 50px 70px 50px"
+          ? "70px 50px 70px 50px"
           : isMobile
-          ? "50px 40px 70px 40px"
-          : "50px 30px 70px 30px",
+          ? "60px 40px 70px 40px"
+          : "60px 30px 70px 30px",
       }}
     >
       <div

@@ -35,7 +35,7 @@ const Help = () => {
           fontSize: isLarge ? "35px" : "28px ",
           marginTop: "0px",
           marginBottom: "0px",
-          textAlign: "left",
+          textAlign: "center",
         }}
       >
         Privremeno skrbništvo
@@ -94,7 +94,7 @@ const Help = () => {
         style={{
           color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "28px ",
-          marginTop: "0px",
+          marginTop: "10px",
           marginBottom: "10px",
           textAlign: "center",
         }}
@@ -170,6 +170,7 @@ const Help = () => {
           overflowWrap: "break-word",
           color: "#78758E",
           marginTop: "-10px",
+          lineHeight: "1.8",
         }}
       >
         Račun za donacije: HR6723600001102587785, ZABAHR2X{" "}
@@ -181,6 +182,7 @@ const Help = () => {
           overflowWrap: "break-word",
           color: "#78758E",
           marginTop: "-10px",
+          lineHeight: "1.8",
         }}
       >
         {" "}
