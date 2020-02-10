@@ -35,7 +35,7 @@ const Udomljavanje = ({
             : isnotLargeatAll
             ? "auto auto"
             : "auto",
-          gridColumnGap: "10px",
+          gridColumnGap: "30px",
           gridRowGap: "10px",
           justifyItems: "center",
           paddingLeft: isLarge ? "70px" : isnotLargeatAll ? "50px" : "20px",

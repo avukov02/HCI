@@ -16,7 +16,7 @@ export default ({ psi }) => {
         sx={{
           display: "grid",
           gridTemplateRows: "auto auto auto",
-          gridColumnGap: "10px",
+          gridColumnGap: "20px",
           gridRowGap: "1px",
           justifyItems: "center",
           padding: "10px",
