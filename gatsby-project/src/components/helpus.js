@@ -34,8 +34,9 @@ const Help = () => {
           color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "28px ",
           marginTop: "0px",
-          marginBottom: "0px",
-          textAlign: "center",
+          marginBottom: "-10px",
+          textAlign: "left",
+          alignSelf: "flex-start",
         }}
       >
         Privremeno skrbništvo
@@ -54,16 +55,41 @@ const Help = () => {
         udomiteljstvo podrazumijeva da ćete na smještaj primiti nekog od naših
         štićenika. Trajanje takvog udomiteljstva odredit ćete na samom početku u
         dogovoru s članovima udruge te ćete za to vrijeme voditi adekvatnu brigu
-        o životinji koja Vam je povjerena na skrb. Udruga na takvom smještaju
-        plaća sve troškove koje životinja ima, ali se čuvalice obvezuju redovito
-        slati fotografije životinje koju imaju na smještaju (osim ako se
-        dogovori da će netko drugi odraditi taj dio) te brinuti o njima) te, kao
-        što smo već rekli, adekvatno brinuti o njoj. Kako biste i Vi i mi bili
-        sigurni da će sve dobro funkcionirati, privremenim udomiteljima dajemo
-        na potpis Ugovor o pivremenom udomiteljstvu koji regulira obostrana
-        prava i obveze. Ako želite pomoći nekoj životinji, a niste u mogućnosti
-        trajno je udomiti, ovo je pravi izbor za Vas. Ukoliko ste zainteresirani
-        za ovakav vid pomoći, javite nam se što prije – čuvalica nikad dosta!
+        o životinji koja Vam je povjerena na skrb.
+      </p>
+      <p
+        style={{
+          fontFamily: "Georgia, serif",
+          fontSize: "1.5em",
+          fontStyle: "italic",
+          lineHeight: " 1.4 ",
+          color: "#C6DAD5",
+          textAlign: "left",
+          marginTop: "0px",
+          marginBottom: "0px",
+          alignSelf: "flex-start",
+        }}
+      >
+        Ne možeš udomiti ljubav, ali je možes spasiti - Udomi psa iz azila!
+      </p>
+      <p
+        style={{
+          fontSize: isLarge ? "20px" : "18px ",
+          color: "#898893",
+          letterSpacing: "1px",
+          lineHeight: "1.8",
+        }}
+      >
+        Udruga na takvom smještaju plaća sve troškove koje životinja ima, ali se
+        čuvalice obvezuju redovito slati fotografije životinje koju imaju na
+        smještaju (osim ako se dogovori da će netko drugi odraditi taj dio) te
+        brinuti o njima) te, kao što smo već rekli, adekvatno brinuti o njoj.
+        Kako biste i Vi i mi bili sigurni da će sve dobro funkcionirati,
+        privremenim udomiteljima dajemo na potpis Ugovor o pivremenom
+        udomiteljstvu koji regulira obostrana prava i obveze. Ako želite pomoći
+        nekoj životinji, a niste u mogućnosti trajno je udomiti, ovo je pravi
+        izbor za Vas. Ukoliko ste zainteresirani za ovakav vid pomoći, javite
+        nam se što prije – čuvalica nikad dosta!
       </p>
       <div
         style={{
@@ -95,8 +121,9 @@ const Help = () => {
           color: "#7DD0BC",
           fontSize: isLarge ? "35px" : "28px ",
           marginTop: "10px",
-          marginBottom: "10px",
-          textAlign: "center",
+          marginBottom: "0px",
+          textAlign: "left",
+          alignSelf: "flex-start",
         }}
       >
         Volontiraj
@@ -110,7 +137,8 @@ const Help = () => {
           color: "#C6DAD5",
           textAlign: "left",
           marginTop: "10px",
-          marginBottom: "0px",
+          marginBottom: "-10px",
+          alignSelf: "flex-start",
         }}
       >
         Volonteri ne dobivaju plaću, ne zato što su bezvrijedni već zato što su
@@ -144,11 +172,27 @@ const Help = () => {
           fontSize: isLarge ? "35px" : "28px ",
           marginTop: isLarge ? "40px" : "20px",
           marginBottom: "0px",
-          textAlign: "center",
+          textAlign: "left",
+          alignSelf: "flex-start",
         }}
       >
         Doniraj
       </h2>
+      <p
+        style={{
+          fontFamily: "Georgia, serif",
+          fontSize: "1.5em",
+          fontStyle: "italic",
+          lineHeight: " 1.4 ",
+          color: "#C6DAD5",
+          textAlign: "left",
+          marginTop: "10px",
+          marginBottom: "-10px",
+          alignSelf: "flex-start",
+        }}
+      >
+        Uzimajući - punimo ruke, dajući - punimo srce!
+      </p>
       <p
         style={{
           fontSize: isLarge ? "20px" : "18px ",
@@ -165,7 +209,7 @@ const Help = () => {
       </p>
       <p
         style={{
-          textAlign: "center",
+          textAlign: isnotLargeatAll ? "center" : "left",
           fontSize: isLarge ? "20px" : "18px ",
           overflowWrap: "break-word",
           color: "#78758E",
@@ -177,7 +221,7 @@ const Help = () => {
       </p>
       <p
         style={{
-          textAlign: "center",
+          textAlign: isnotLargeatAll ? "center" : "left",
           fontSize: isLarge ? "20px" : "18px ",
           overflowWrap: "break-word",
           color: "#78758E",

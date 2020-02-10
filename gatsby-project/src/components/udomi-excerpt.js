@@ -2,8 +2,11 @@
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 export default ({ psi }) => {
+  const isnotLargeatAll = useMediaQuery("(min-width: 760px)")
+  const isMobile = useMediaQuery("(min-width: 450px)")
   const psiList = psi.map(({ pas }) => {
     const { id, excerpt } = pas
     const { name, image, slug } = pas.frontmatter
@@ -32,7 +35,15 @@ export default ({ psi }) => {
             {name}
           </Styled.a>
         </p>
-        <p sx={{ color: "#808080", mb: 1, maxWidth: "222px" }}>{excerpt}</p>
+        <p
+          sx={{
+            color: "#808080",
+            mb: 1,
+            maxWidth: isnotLargeatAll ? "222px" : isMobile ? "300px" : "222px",
+          }}
+        >
+          {excerpt}
+        </p>
         <Styled.a as={Link} to={`/udomi/${slug}`}>
           <p sx={{ color: "#9AD1C4" }}>Pročitaj više...</p>
         </Styled.a>

@@ -38,7 +38,7 @@ const BlogLink = ({ ...prop }) => (
     sx={{
       display: "inline-block",
       p: 3,
-      color:"#9AD1C4",
+      color: "#406b62",
       backgroundColor: "gray.2",
       textDecoration: "none",
       textTransform: "uppercase",
@@ -54,14 +54,17 @@ const BlogLink = ({ ...prop }) => (
 )
 
 const BlogPrevious = ({ ...prop }) => (
-  <div {...prop} sx={{ color:"#9AD1C4",width: ["100%", "50%"],textDecoration:"none" }} />
+  <div
+    {...prop}
+    sx={{ color: "#9AD1C4", width: ["100%", "50%"], textDecoration: "none" }}
+  />
 )
 
 const BlogNext = ({ ...prop }) => (
   <div
     {...prop}
     sx={{
-        color:"#9AD1C4",
+      color: "#9AD1C4",
       width: ["100%", "50%"],
       marginTop: [2, 0],
       textAlign: "right",
@@ -73,7 +76,7 @@ const BlogNav = ({ ...prop }) => (
   <nav
     {...prop}
     sx={{
-      color:"#9AD1C4",
+      color: "#9AD1C4",
       display: ["block", "flex"],
       justifyContent: "space-between",
       width: "100%",

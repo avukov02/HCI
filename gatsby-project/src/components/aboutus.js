@@ -82,19 +82,37 @@ const About = () => {
           color: "#898893",
           letterSpacing: "1px",
           lineHeight: "1.8",
-          marginLeft: "-40px",
+          marginLeft: "-15px",
         }}
       >
-        <ul style={{ textAlign: "left", listStylePosition: "inside" }}>
-          <p>Ciljevi i aktivnosti udruge Sigurna kućica:</p>
-          <li>briga za napuštene i neželjene životinje</li>
-          <li>poticanje udomljavanja i odgovornog vlasništva</li>
-          <li>sprečavanje zlostavljanja životinja</li>
-          <li>
+        <ul
+          style={{
+            textAlign: "left",
+            listStylePosition: "inside",
+            textIndent: "-1.5em",
+          }}
+        >
+          <p style={{ color: "#78758E" }}>
+            Ciljevi i aktivnosti udruge Sigurna kućica:
+          </p>
+          <li
+            style={{
+              marginBottom: "5px",
+            }}
+          >
+            briga za napuštene i neželjene životinje
+          </li>
+          <li style={{ marginBottom: "5px" }}>
+            poticanje udomljavanja i odgovornog vlasništva
+          </li>
+          <li style={{ marginBottom: "5px" }}>
+            sprečavanje zlostavljanja životinja
+          </li>
+          <li style={{ marginBottom: "5px" }}>
             razvijanje pozitivnog odnosa prema životinjama i promicanje humanog
             postupanja prema njima
           </li>
-          <li>
+          <li style={{ marginBottom: "5px" }}>
             razvijanje kulture brige za slabe, nemoćne, nezaštićene i
             neprihvaćene životinje
           </li>

@@ -14,12 +14,13 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>
 
 const GoogleMap = () => {
   const isLarge = useMediaQuery("(min-width: 500px)")
+  const isMobile = useMediaQuery("(min-width: 380px")
   return (
     <div
       style={{
         display: "flex",
-        height: isLarge ? "280px" : "200px",
-        width: isLarge ? "420px" : "250px",
+        height: isLarge ? "280px" : isMobile ? "230px" : "200px",
+        width: isLarge ? "420px" : isMobile ? "330px" : "250px",
       }}
     >
       <GoogleMapReact

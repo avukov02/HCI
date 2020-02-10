@@ -15,7 +15,7 @@ const Udomljavanje = ({
   },
 }) => {
   const isLarge = useMediaQuery("(min-width: 1090px)")
-  const isnotLargeatAll = useMediaQuery("(min-width: 760px)")
+  const isnotLargeatAll = useMediaQuery("(min-width: 680px)")
   const { currentPage, numofPages } = pageContext
   const isFirst = currentPage === 1
   const isLast = currentPage === numofPages
@@ -38,8 +38,8 @@ const Udomljavanje = ({
           gridColumnGap: "10px",
           gridRowGap: "10px",
           justifyItems: "center",
-          paddingLeft: isLarge ? "70px" : isnotLargeatAll ? "70px" : "20px",
-          paddingRight: isLarge ? "70px" : isnotLargeatAll ? "70px" : "20px",
+          paddingLeft: isLarge ? "70px" : isnotLargeatAll ? "50px" : "20px",
+          paddingRight: isLarge ? "70px" : isnotLargeatAll ? "50px" : "20px",
           marginBottom: "10px",
           marginTop: isLarge ? "50px" : "30px",
         }}
