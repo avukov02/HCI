@@ -20,7 +20,7 @@ export default ({ pageContext, data }) => {
       <PozadinskaSlika naziv={"Blog"} />
 
       <BlogNav.Previous style={{marginTop:"-15px"}}>
-          {previous && (
+          {(next || previous) && (
             <BlogNav.Link to={`/blog/`}>
               {leftArrow} {'Nazad na blog'}
             </BlogNav.Link>

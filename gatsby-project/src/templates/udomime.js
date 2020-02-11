@@ -8,20 +8,31 @@ import Layout from "../components/layout"
 import Title from "../components/title"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
 import Img from "gatsby-image"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 export default ({ pageContext, data }) => {
   const { pas } = data
   const { previous, next } = pageContext
+  const isLarge = useMediaQuery("(min-width: 640px)")
 
   return (
     <Layout>
       <SEO title={pas.frontmatter.name} />
       <PozadinskaSlika naziv={"Udomi"} />
+
+      <BlogNav.Previous style={{marginTop:"-15px"}}>
+          {(next || previous) && (
+            <BlogNav.Link to={`/udomi/`}>
+              {leftArrow} {'Nazad na udomi'}
+            </BlogNav.Link>
+          )}
+        </BlogNav.Previous>
+
       <div
         style={{
           display: "block",
           width: "80%",
-          margin: "0 auto",
+          margin: isLarge ? "-60px auto 0 auto" : "-30px auto 0 auto"
         }}
       >
         <Title>{pas.frontmatter.name}</Title>
