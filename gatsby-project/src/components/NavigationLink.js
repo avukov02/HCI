@@ -20,10 +20,11 @@ const NavigationLink = ({ children, ...prop }) => {
           `calc(${theme.sizes.logo} - 4 * ${theme.sizes.navLinkBorder})`,
         borderTop: theme => `${theme.sizes.navLinkBorder} solid transparent`,
         borderBottom: theme => `${theme.sizes.navLinkBorder} solid transparent`,
-        transition: "all 0.25s linear",
+        transition: "all 0.25s ease-in-out",
         "&:hover": {
           color: "primaryHover",
           borderBottom: theme => `${theme.sizes.navLinkBorder} solid #9AD1C4`,
+          transform:"scale(1.05)",
         },
       }}
       activeStyle={{

@@ -12,7 +12,11 @@ const Logo = () => (
 
           height: "logo",
           width: "auto",
-          marginTop:"-20px"
+          marginTop:"-20px",
+          transition: "all .2s ease-in-out",
+          "&:hover": {
+            transform:"scale(1.03)",
+          }, 
         }}
       />
     </Link>

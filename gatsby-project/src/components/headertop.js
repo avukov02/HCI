@@ -51,9 +51,11 @@ const Headertop = () => {
             backgroundColor: "#9AD1C4",
             border: "none",
             borderRadius: "15px",
+            transition: "all .2s ease-in-out",
             "&:hover": {
               backgroundColor: "#7DD0BC",
               opacity: 1,
+              transform:"scale(1.03)",
             },
             "&:active": {
               transform: "translateY(1px)",

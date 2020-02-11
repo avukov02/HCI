@@ -1,6 +1,11 @@
 /* This code is subject to LICENSE in root of this repository */
 
 /* Used to detect in JavaScript if apps have loaded styles or not. */
+
+
+
+/*    margin: 3vh 3vh 3vh auto;*/
+
 :root {
     --reach-dialog: 1;
     

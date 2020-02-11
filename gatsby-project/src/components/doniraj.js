@@ -12,7 +12,10 @@ const Doniraj = ({ menuItem }) => {
         alignItems: "center",
         marginLeft: "30px",
         zIndex: "1",
-      }}
+        transition: "all .2s ease-in-out",
+          "&:hover": {
+            transform:"scale(1.05)",
+          }, }}
     >
       <img
         alt="doniraj"

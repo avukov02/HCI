@@ -11,6 +11,8 @@ export default ({ psi }) => {
     const { id, excerpt } = pas
     const { name, image, slug } = pas.frontmatter
     return (
+      <Link to={`/udomi/${slug}`}
+      style= {{textDecorationLine:"none"}}>
       <div
         key={id}
         sx={{
@@ -21,8 +23,13 @@ export default ({ psi }) => {
           justifyItems: "center",
           padding: "10px",
           textAlign: "center",
-          border: "1px  solid #9AD1C4",
+          
+          border: "2px  solid #9AD1C4",
           marginBottom: "20px",
+          transition: "all .2s ease-in-out",
+          "&:hover": {
+            transform:"scale(1.03)",
+          }, 
         }}
       >
         <Img sx={{ mb: 1 }} fixed={image.childImageSharp.fixed} />
@@ -30,7 +37,8 @@ export default ({ psi }) => {
           <Styled.a
             as={Link}
             to={`/udomi/${slug}`}
-            style={{ fontSize: "large" }}
+            style={{ fontSize: "large",
+                     fontWeight:"bold"}}
           >
             {name}
           </Styled.a>
@@ -48,6 +56,7 @@ export default ({ psi }) => {
           <p sx={{ color: "#9AD1C4" }}>Pročitaj više...</p>
         </Styled.a>
       </div>
+      </Link>
     )
   })
 

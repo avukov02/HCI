@@ -29,7 +29,11 @@ const FooterIcon = () => {
             sx={{
               height: "footerimg",
               width: "auto",
-            }}
+              transition: "all .2s ease-in-out",
+          "&:hover": {
+            transform:"scale(1.1)",
+          }, }
+            }
           ></img>
         </a>
       ))}

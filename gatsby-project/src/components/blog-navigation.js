@@ -45,9 +45,11 @@ const BlogLink = ({ ...prop }) => (
       fontWeight: "medium",
       lineHeight: "body",
       letterSpacing: "tight",
-      transition: "all 0.25s linear",
+      transition: "all 0.2s ease-in-out",
       "&:hover": {
         color: "primaryHover",
+        transform:"scale(1.05)",
+          
       },
     }}
   />

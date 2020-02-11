@@ -7,7 +7,15 @@ export default ({ posts }) => {
     const { id, excerpt } = post
     const { title, date, slug } = post.frontmatter
     return (
-      <section key={id} sx={{ mb: [3, 4] }}>
+      <Link to={`/blog/${slug}`}
+      style={{textDecorationLine:"none",
+      marginBottom:"2vh",
+      }}>
+      <section key={id} sx={{ mb: [3, 4] ,
+      transition: "all .2s ease-in-out",
+      "&:hover": {
+        transform:"scale(1.03)",
+      }, }}>
         <Styled.h3 sx={{ mb: 1 }}>
           <Styled.a as={Link} to={`/blog/${slug}`}>
             {title}
@@ -18,6 +26,7 @@ export default ({ posts }) => {
         </span>
         <Styled.p sx={{ m: 0 }}>{excerpt}</Styled.p>
       </section>
+      </Link>
     )
   })
 

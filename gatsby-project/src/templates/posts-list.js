@@ -69,8 +69,14 @@ const BlogList = ({
           marginRight: isLarge ? "100px" : "30px",
           position: "relative",
           paddingLeft: "10px",
+          marginBottom:"1vh",
           borderTop: "1px solid #78758E",
           borderBottom: "1px solid #78758E",
+          transition: "all .2s ease-in-out",
+          "&:hover": {
+            transform:"scale(1.03)",
+          }, 
+        
         }}
       >
         <input
@@ -89,9 +95,14 @@ const BlogList = ({
             color: "text",
             fontSize: 1,
             fontWeight: "medium",
+            width:"800px",
+            transition: "all .2s ease-in-out",
+          "&:hover": {
+            transform:"scale(1.01)",
+          }, 
             "&:focus": {
               outline: "none",
-              backgroundColor: "#9AD1C4",
+              backgroundColor: "rgb(226, 240, 237)",
               maxWidth: isnotLarge ? "200px" : "158px",
             },
           }}
