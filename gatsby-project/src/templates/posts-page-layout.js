@@ -7,20 +7,31 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Layout from "../components/layout"
 import Title from "../components/title"
 import BlogNav, { leftArrow, rightArrow } from "../components/blog-navigation"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 export default ({ pageContext, data }) => {
   const { post } = data
   const { previous, next } = pageContext
+  const isLarge = useMediaQuery("(min-width: 640px)")
 
   return (
     <Layout>
       <SEO title={post.frontmatter.title} />
       <PozadinskaSlika naziv={"Blog"} />
+
+      <BlogNav.Previous style={{marginTop:"-15px"}}>
+          {previous && (
+            <BlogNav.Link to={`/blog/`}>
+              {leftArrow} {'Nazad na blog'}
+            </BlogNav.Link>
+          )}
+        </BlogNav.Previous>
+
       <div
         style={{
           display: "block",
           width: "80%",
-          margin: "0 auto",
+          margin: isLarge ? "-60px auto 0 auto" : "-30px auto 0 auto"
         }}
       >
         <Title>{post.frontmatter.title}</Title>
