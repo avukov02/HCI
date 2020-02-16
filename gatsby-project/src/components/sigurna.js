@@ -40,7 +40,7 @@ const Sigurna = () => {
         style={{
           fontSize: isLarge ? "20px" : "18px ",
           textAlign: "center",
-          color: "#898893",
+          color: "#808080",
           margin: isLarge
             ? "-15px 150px 0px 150px"
             : isnotLargeatAll

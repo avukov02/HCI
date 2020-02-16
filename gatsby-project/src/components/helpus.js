@@ -205,28 +205,30 @@ const Help = () => {
         Donacije su ono što nam omogućava adekvatnu brigu o našim štićenicima.
         Donirati možete novac, hranu, dekice, dotrajalu posteljinu, sredstva
         protiv nametnika i sve ostalo što bi nam moglo koristiti u radu. Ako se
-        odlučite donirati novac, to možete učiniti na naše račun:
+        odlučite donirati novac, to možete učiniti na naš račun.
       </p>
       <p
         style={{
-          textAlign: isnotLargeatAll ? "center" : "left",
+          textAlign: "left",
           fontSize: isLarge ? "20px" : "18px ",
           overflowWrap: "break-word",
           color: "#78758E",
           marginTop: "-10px",
           lineHeight: "1.8",
+          alignSelf: "flex-start",
         }}
       >
         Račun za donacije: HR6723600001102587785, ZABAHR2X{" "}
       </p>
       <p
         style={{
-          textAlign: isnotLargeatAll ? "center" : "left",
+          textAlign: "left",
           fontSize: isLarge ? "20px" : "18px ",
           overflowWrap: "break-word",
           color: "#78758E",
           marginTop: "-10px",
           lineHeight: "1.8",
+          alignSelf: "flex-start",
         }}
       >
         {" "}
