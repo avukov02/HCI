@@ -11,51 +11,53 @@ export default ({ psi }) => {
     const { id, excerpt } = pas
     const { name, image, slug } = pas.frontmatter
     return (
-      <Link to={`/udomi/${slug}`}
-      style= {{textDecorationLine:"none"}}>
-      <div
-        key={id}
-        sx={{
-          display: "grid",
-          gridTemplateRows: "auto auto auto",
-          gridColumnGap: "20px",
-          gridRowGap: "1px",
-          justifyItems: "center",
-          padding: "10px",
-          textAlign: "center",
-          
-          border: "2px  solid #9AD1C4",
-          marginBottom: "20px",
-          transition: "all .2s ease-in-out",
-          "&:hover": {
-            transform:"scale(1.03)",
-          }, 
-        }}
-      >
-        <Img sx={{ mb: 1 }} fixed={image.childImageSharp.fixed} />
-        <p sx={{ ml: 0, mr: 0, mb: 0, color: "#9AD1C4" }}>
-          <Styled.a
-            as={Link}
-            to={`/udomi/${slug}`}
-            style={{ fontSize: "large",
-                     fontWeight:"bold"}}
-          >
-            {name}
-          </Styled.a>
-        </p>
-        <p
+      <Link to={`/udomi/${slug}`} style={{ textDecorationLine: "none" }}>
+        <div
+          key={id}
           sx={{
-            color: "#808080",
-            mb: 1,
-            maxWidth: isnotLargeatAll ? "222px" : isMobile ? "300px" : "222px",
+            display: "grid",
+            gridTemplateRows: "auto auto auto",
+            gridColumnGap: "20px",
+            gridRowGap: "1px",
+            justifyItems: "center",
+            padding: "10px",
+            textAlign: "center",
+            justifyContent: "center",
+            border: "2px  solid #9AD1C4",
+            marginBottom: "20px",
+            transition: "all .2s ease-in-out",
+            "&:hover": {
+              transform: "scale(1.03)",
+            },
           }}
         >
-          {excerpt}
-        </p>
-        <Styled.a as={Link} to={`/udomi/${slug}`}>
-          <p sx={{ color: "#9AD1C4" }}>Pročitaj više...</p>
-        </Styled.a>
-      </div>
+          <Img sx={{ mb: 1 }} fixed={image.childImageSharp.fixed} />
+          <p sx={{ ml: 0, mr: 0, mb: 0, color: "#9AD1C4" }}>
+            <Styled.a
+              as={Link}
+              to={`/udomi/${slug}`}
+              style={{ fontSize: "large", fontWeight: "bold" }}
+            >
+              {name}
+            </Styled.a>
+          </p>
+          <p
+            sx={{
+              color: "#808080",
+              mb: 1,
+              maxWidth: isnotLargeatAll
+                ? "222px"
+                : isMobile
+                ? "300px"
+                : "210px",
+            }}
+          >
+            {excerpt}
+          </p>
+          <Styled.a as={Link} to={`/udomi/${slug}`}>
+            <p sx={{ color: "#9AD1C4" }}>Pročitaj više...</p>
+          </Styled.a>
+        </div>
       </Link>
     )
   })
