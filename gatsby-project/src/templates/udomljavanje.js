@@ -42,14 +42,14 @@ const Udomljavanje = ({
           paddingLeft: isLarge
             ? "70px"
             : isnotLargeatAll
-            ? "50px"
+            ? "20px"
             : isMobile
             ? "6px"
             : "20px",
           paddingRight: isLarge
             ? "70px"
             : isnotLargeatAll
-            ? "50px"
+            ? "20px"
             : isMobile
             ? "6px"
             : "20px",
