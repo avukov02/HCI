@@ -21,9 +21,9 @@ const SideMenu = ({ menuItems }) => {
         boxShadow: theme => theme.shadows.header,
       }}
     >
-      {menuItems.map(({ link, text }) => (
+      {menuItems.map(({ link, text, id }) => (
         <Link
-          key={link}
+          key={id}
           to={link}
           sx={{
             m: 2,

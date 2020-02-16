@@ -12,8 +12,8 @@ const NavigationLinks = ({ menuItems }) => {
 
   return isLarge ? (
     <>
-      {menuItems.map(({ link, text }) => (
-        <NavigationLink key={link} to={link}>
+      {menuItems.map(({ link, text, id }) => (
+        <NavigationLink key={id} to={link}>
           {text}
         </NavigationLink>
       ))}
@@ -21,8 +21,8 @@ const NavigationLinks = ({ menuItems }) => {
     </>
   ) : isLarge1 ? (
     <>
-      {menuItems.slice(0, 3).map(({ link, text }) => (
-        <NavigationLink key={link} to={link}>
+      {menuItems.slice(0, 3).map(({ link, text, id }) => (
+        <NavigationLink key={id} to={link}>
           {text}
         </NavigationLink>
       ))}
@@ -30,8 +30,8 @@ const NavigationLinks = ({ menuItems }) => {
     </>
   ) : isLarge2 ? (
     <>
-      {menuItems.slice(0, 2).map(({ link, text }) => (
-        <NavigationLink key={link} to={link}>
+      {menuItems.slice(0, 2).map(({ link, text, id }) => (
+        <NavigationLink key={id} to={link}>
           {text}
         </NavigationLink>
       ))}
@@ -39,8 +39,8 @@ const NavigationLinks = ({ menuItems }) => {
     </>
   ) : isLarge3 ? (
     <>
-      {menuItems.slice(0, 1).map(({ link, text }) => (
-        <NavigationLink key={link} to={link}>
+      {menuItems.slice(0, 1).map(({ link, text, id }) => (
+        <NavigationLink key={id} to={link}>
           {text}
         </NavigationLink>
       ))}
@@ -48,8 +48,8 @@ const NavigationLinks = ({ menuItems }) => {
     </>
   ) : (
     <>
-      {menuItems.slice(0, 0).map(({ link, text }) => (
-        <NavigationLink key={link} to={link}>
+      {menuItems.slice(0, 0).map(({ link, text, id }) => (
+        <NavigationLink key={id} to={link}>
           {text}
         </NavigationLink>
       ))}

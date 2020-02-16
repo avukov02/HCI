@@ -7,22 +7,27 @@ module.exports = {
       {
         text: "Naslovna",
         link: "/",
+        id: "18uhehdbsb",
       },
       {
         text: "Udomi",
         link: "/udomi",
+        id: "18uhehdbaw",
       },
       {
         text: "Trebamo vas",
         link: "/trebamovas",
+        id: "18uhehksao",
       },
       {
         text: "O nama",
         link: "/onama",
+        id: "20uhehdbsb",
       },
       {
         text: "Blog",
         link: "/blog",
+        id: "18uhehkola",
       },
     ],
   },
@@ -34,13 +39,12 @@ module.exports = {
         name: `content`,
         path: `${__dirname}/content`,
       },
-      
     },
     {
-      resolve:'gatsby-plugin-netlify-identity',
-      options:{
-        url:'https://modest-goodall-3c77be.netlify.com'
-      }
+      resolve: "gatsby-plugin-netlify-identity",
+      options: {
+        url: "https://modest-goodall-3c77be.netlify.com",
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -69,7 +73,7 @@ module.exports = {
     // `gatsby-plugin-offline`,
     `gatsby-plugin-styled-components`,
     {
-    resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
