@@ -23,8 +23,7 @@ const NavigationLink = ({ children, ...prop }) => {
         transition: "all 0.25s ease-in-out",
         "&:hover": {
           color: "primaryHover",
-          borderBottom: theme => `${theme.sizes.navLinkBorder} solid #9AD1C4`,
-          transform:"scale(1.05)",
+          borderBottom: theme => `${theme.sizes.navLinkBorder} solid #9AD1C4`
         },
       }}
       activeStyle={{

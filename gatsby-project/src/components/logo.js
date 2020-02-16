@@ -2,8 +2,11 @@
 import { Link } from "gatsby"
 import logo from "../assets/logo1.png"
 import {jsx} from "theme-ui"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
-const Logo = () => (
+const Logo = () => {
+  const isLarge=useMediaQuery("(min-width:450px)")
+  return(
     <Link to="/"  sx={{ display: "flex", alignItems: "center" }}>
       <img
         alt="logo"
@@ -15,11 +18,12 @@ const Logo = () => (
           marginTop:"-20px",
           transition: "all .2s ease-in-out",
           "&:hover": {
-            transform:"scale(1.03)",
+            transform:isLarge?"scale(1.03)":"scale(1)",
           }, 
         }}
       />
     </Link>
   )
+}
 
   export default Logo

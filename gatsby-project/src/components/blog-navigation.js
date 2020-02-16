@@ -49,7 +49,6 @@ const BlogLink = ({ ...prop }) => (
       "&:hover": {
         color: "primaryHover",
         transform:"scale(1.05)",
-          
       },
     }}
   />

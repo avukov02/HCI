@@ -1,11 +1,13 @@
 /** @jsx jsx */
 import { jsx, Styled } from "theme-ui"
 import { Link } from "gatsby"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 export default ({ posts }) => {
   const postsList = posts.map(({ post }) => {
     const { id, excerpt } = post
     const { title, date, slug } = post.frontmatter
+    const isLarge = useMediaQuery("(min-width: 500px)")
     return (
       <Link to={`/blog/${slug}`}
       style={{textDecorationLine:"none",
@@ -14,7 +16,7 @@ export default ({ posts }) => {
       <section key={id} sx={{ mb: [3, 4] ,
       transition: "all .2s ease-in-out",
       "&:hover": {
-        transform:"scale(1.03)",
+        transform: isLarge? "scale(1.03)":"scale(1)",
       }, }}>
         <Styled.h3 sx={{ mb: 1 }}>
           <Styled.a as={Link} to={`/blog/${slug}`}>

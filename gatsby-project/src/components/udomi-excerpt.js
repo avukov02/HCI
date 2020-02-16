@@ -27,7 +27,7 @@ export default ({ psi }) => {
             marginBottom: "20px",
             transition: "all .2s ease-in-out",
             "&:hover": {
-              transform: "scale(1.03)",
+              transform: isMobile? "scale(1.03)":"scale(1)",
             },
           }}
         >

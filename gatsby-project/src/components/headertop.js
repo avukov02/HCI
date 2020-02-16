@@ -55,7 +55,7 @@ const Headertop = () => {
             "&:hover": {
               backgroundColor: "#7DD0BC",
               opacity: 1,
-              transform:"scale(1.03)",
+              transform:Hide?"scale(1.03)":"scale(1)",
             },
             "&:active": {
               transform: "translateY(1px)",

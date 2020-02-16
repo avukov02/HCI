@@ -53,8 +53,10 @@ class MoreButton extends React.Component {
           ml: 4,
           width: "50px",
           cursor: "pointer",
+          // transition: "all 0.2s ease-in-out",
           "&:hover": {
             backgroundColor: "indigo.2",
+            // transform:"scale(1.05)",
           },
         }}
         onClick={this.ClickMoreButton}
@@ -71,7 +73,11 @@ class MoreButton extends React.Component {
             stroke: "red",
             height: "more",
             width: "auto",
-          }}
+            transition: "all 0.2s ease-in-out",
+            "&:hover": {
+            color: "primaryHover",
+            transform:"scale(1.05)",
+            }}}
         />
         {opened && <SideMenu menuItems={menuItems} />}
       </div>
@@ -88,7 +94,11 @@ class MoreButton extends React.Component {
             stroke: "red",
             height: "more",
             width: "auto",
-          }}
+            transition: "all 0.2s ease-in-out",
+            "&:hover": {
+            color: "primaryHover",
+            transform:"scale(1.05)",
+            }}}
         />
       </div>
     )

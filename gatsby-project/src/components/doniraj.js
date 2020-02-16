@@ -2,8 +2,10 @@
 import doniraj from "../assets/Group42.png"
 import { jsx } from "theme-ui"
 import { Link } from "gatsby"
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 
 const Doniraj = ({ menuItem }) => {
+  const isLarge=useMediaQuery("(min-width:450px)")
   return (
     <Link
       to={menuItem.link}
@@ -14,7 +16,7 @@ const Doniraj = ({ menuItem }) => {
         zIndex: "1",
         transition: "all .2s ease-in-out",
           "&:hover": {
-            transform:"scale(1.05)",
+            transform:isLarge?"scale(1.05)":"scale(1)",
           }, }}
     >
       <img
